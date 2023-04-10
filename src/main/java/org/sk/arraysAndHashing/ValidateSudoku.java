@@ -11,7 +11,16 @@ public class ValidateSudoku {
 			for (int j = 0; j < 9; j++) {
 				if (board[i][j] != '.') {
 					int num = board[i][j] - '1';
-					int boxIndex = (i / 3) * 3 + j / 3;
+					int boxIndex = (i / 3) * 3 + j / 3; 
+					// boxIndex generates only below values  
+					// 0 1 2
+					// 3 4 5
+					// 6 7 8
+					// Eg: 0 denotes a grid(3 x 3) as below
+					// board[0][0]  board[0][1]  board[0][2]
+					// board[1][0]  board[1][1]  board[1][2]
+					// board[2][0]  board[2][1]  board[2][2]
+					
 					if (rows[i][num] || cols[j][num] || boxes[boxIndex][num]) {
 						return false;
 					}
@@ -21,7 +30,6 @@ public class ValidateSudoku {
 					boxes[boxIndex][num] = true;
 				}
 			}
-			System.out.println("One row");
 		}
 
 		return true;
