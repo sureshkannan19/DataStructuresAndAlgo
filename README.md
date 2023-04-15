@@ -47,4 +47,5 @@
           
  3. **ValidPalindrome**: <a href="https://leetcode.com/problems/valid-palindrome/">Question</a>
      & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/ValidPalindrome.java">Answer</a>
-     
+
+4. **Container with most water**: <a href="https://leetcode.com/problems/container-with-most-water/">Question</a> & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/MaxArea.java">Answer</a>  
