@@ -1,12 +1,13 @@
-# DSA --  <a href="https://neetcode.io/roadmap">Neetcode</a> problem solving in Java
 <div>
 <style>
-            a {
-                text-decoration: none;
-            }
-
+	a {
+      text-decoration: none;
+   }
 </style>
 </div>
+
+# DSA --  <a href="https://neetcode.io/roadmap">Neetcode</a> problem solving in Java
+
 --------------------------------------------------------------------------------------------------------
 
 **Arrays & Hashing:**
