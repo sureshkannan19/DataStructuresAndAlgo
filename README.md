@@ -111,3 +111,22 @@
     <td>Iterate from both ends(left, right), store maximum value of left and right, if maxLeft <= maxRight, subtract (maxLeft -  height[left]), else  maxRight-height[right], and add it to result.</td>
   </tr>
 </table>
+
+--------------------------------------------------------------------------------------------------------
+**Stack : **
+
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/ValidParentheses.java">ValidParentheses</a></td>
+    <td>Iterate every element and add it to LinkedList.push(stack) if its open parentheses else poll last added open parentheses and validate</td>
+  </tr>
+ </table> 
+--------------------------------------------------------------------------------------------------------
