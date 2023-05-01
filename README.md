@@ -72,13 +72,42 @@
 --------------------------------------------------------------------------------------------------------
 **Two Pointers:**
 
-1. **TwoSum**: <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Question</a>
-     & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/TwoSum.java">Answer</a>
-     
- 2. **ThreeSum**: <a href="https://leetcode.com/problems/3sum/">Question</a>
-     & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/ThreeSum.java">Answer</a>
-          
- 3. **ValidPalindrome**: <a href="https://leetcode.com/problems/valid-palindrome/">Question</a>
-     & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/ValidPalindrome.java">Answer</a>
-
-4. **Container with most water**: <a href="https://leetcode.com/problems/container-with-most-water/">Question</a> & <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/MaxArea.java">Answer</a>  
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Two Sum input array is Sorted</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/TwoSum.java">TwoSum</a></td>
+    <td>Iterate array from both ends(left, right) and decrease/increase both ends based on the target</td>
+  </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/3sum/">Three Sum</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/ThreeSum.java">ThreeSum</a></td>
+    <td>Sort Array and loop outer array and Iterate inner array from both ends(left, right) and decrease/increase both ends based on the target</td>
+  </tr>
+  <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/valid-palindrome/">Valid Palindrome</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/ValidPalindrome.java">Valid Palindrome</a></td>
+    <td>From charMap(new char[256]) and assign value for 0-9 and assign same value for charMap[i + 'a'] = charMap[i + 'A'] and 
+    Iterate from both ends(left, right), skip if either left or right end value is zero</td>
+  </tr>
+  <tr>
+	<td>4</td>
+    <td><a href="https://leetcode.com/problems/container-with-most-water/">Container with Most water</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/MaxArea.java">MaxArea</a></td>
+    <td>Iterate from both ends(left, right), get minimum value of between left and right, and multiply the distance between them.</td>
+  </tr>
+  <tr>
+	<td>5</td>
+    <td><a href="https://leetcode.com/problems/trapping-rain-water/description/">Trap rain water</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/twopointers/TrapRainWater.java">TrapRainWater</a></td>
+    <td>Iterate from both ends(left, right), store maximum value of left and right, if maxLeft <= maxRight, subtract (maxLeft -  height[left]), else  maxRight-height[right], and add it to result.</td>
+  </tr>
+</table>
