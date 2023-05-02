@@ -128,5 +128,11 @@
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/ValidParentheses.java">ValidParentheses</a></td>
     <td>Iterate every element and add it to LinkedList.push(stack) if its open parentheses else poll last added open parentheses and validate</td>
   </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/min-stack/">Min stack</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/MinStack.java">MinStack</a> && <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/MinStackViaNode.java">MinStackViaNode</a></td>
+    <td>Store min value at each node level and return</td>
+  </tr>
  </table> 
 --------------------------------------------------------------------------------------------------------
