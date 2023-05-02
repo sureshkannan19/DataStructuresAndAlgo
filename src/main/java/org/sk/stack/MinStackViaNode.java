@@ -27,17 +27,14 @@ public class MinStackViaNode {
 	public void push(int val) {
 		Node tmp = new Node(val);
 		if (size == 0) {
-			stack = tmp;
-			stack.value = val;
-			stack.next = null;
-			stack.min = val;
-			size++;
+			tmp.next = null;
+			tmp.min = val;
 		} else {
 			tmp.min = Math.min(stack.min, val);
 			tmp.next = stack;
-			stack = tmp;
-			size++;
 		}
+		stack = tmp;
+		size++;
 	}
 
 	public void pop() {
