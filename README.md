@@ -134,5 +134,11 @@
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/MinStack.java">MinStack</a> && <a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/MinStackViaNode.java">MinStackViaNode</a></td>
     <td>Store min value at each node level and return</td>
   </tr>
+  <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">EvaluateReversePolishNotation</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/EvaluateReversePolishNotation.java">EvaluateReversePolishNotation</a></td>
+    <td>Iterate and add operands to list and once encountered operators poll last two operands and do the operation.</td>
+  </tr>
  </table> 
 --------------------------------------------------------------------------------------------------------
