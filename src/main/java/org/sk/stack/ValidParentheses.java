@@ -19,7 +19,7 @@ public class ValidParentheses {
 			Character open = paranthesesMap.get(c);
 			if (open != null) {
 				if (!parantheses.isEmpty() && parantheses.peek().equals(open)) {
-					parantheses.poll();
+					parantheses.pop();
 				} else {
 					return false;
 				}
@@ -29,4 +29,12 @@ public class ValidParentheses {
 		}
 		return parantheses.size() == 0;
 	}
+	
+	public static void main(String[] args) {
+		ValidParentheses vp = new ValidParentheses();
+		System.out.println(vp.isValid("()"));
+		System.out.println(vp.isValid("({})[]"));
+		System.out.println(vp.isValid("({}){"));
+	}
 }
+

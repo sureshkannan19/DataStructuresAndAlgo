@@ -24,8 +24,8 @@ public class MinStack {
 	}
 
 	public void pop() {
-		stack.poll();
-		Integer value = minStack.poll();
+		stack.pop();
+		Integer value = minStack.pop();
 		if (value != null && value.equals(min) && !minStack.isEmpty()) {
 			min = minStack.peek();
 		}

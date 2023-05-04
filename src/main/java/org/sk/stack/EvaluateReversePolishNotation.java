@@ -9,19 +9,19 @@ public class EvaluateReversePolishNotation {
 		for (int i = 0; i < tokens.length; i++) {
 			switch (tokens[i]) {
 			case "/":
-				int last = tokensList.poll();
-				int prevLast = tokensList.poll();
+				int last = tokensList.pop();
+				int prevLast = tokensList.pop();
 				tokensList.push(prevLast / last);
 				break;
 			case "*":
-				tokensList.push(tokensList.poll() * tokensList.poll());
+				tokensList.push(tokensList.pop() * tokensList.pop());
 				break;
 			case "+":
-				tokensList.push(tokensList.poll() + tokensList.poll());
+				tokensList.push(tokensList.pop() + tokensList.pop());
 				break;
 			case "-":
-				last = tokensList.poll();
-				prevLast = tokensList.poll();
+				last = tokensList.pop();
+				prevLast = tokensList.pop();
 				tokensList.push(prevLast - last);
 				break;
 			default:
