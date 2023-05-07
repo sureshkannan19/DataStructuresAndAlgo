@@ -140,5 +140,32 @@
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/EvaluateReversePolishNotation.java">EvaluateReversePolishNotation</a></td>
     <td>Iterate and add operands to stack and once encountered operators (+, -, /, *) poll last two operands and do the operation.</td>
   </tr>
+  <tr>
+	<td>4</td>
+    <td><a href="https://leetcode.com/problems/generate-parentheses/">GenerateParentheses</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/GenerateParentheses.java">GenerateParentheses</a></td>
+    <td><strong>Backtracking Approach--></strong><br>
+    <strong>Basic Conditions:</strong><br>
+    1. Valid Parentheses will have open and close Parentheses at left and right places<br>
+    2. Open and close parentheses will be in equal count.<br>
+    <strong>Steps:</strong><br>
+    So append open parentheses at beginning and limit appending the parentheses based on given <strong>n - input</strong> <br>
+    and recursively call the same backtracking helper method and generate parentheses, <br>and 
+	reduce string length once the required size is reached.
+   </td>
+  </tr>
+   <tr>
+	<td>5</td>
+    <td><a href="https://leetcode.com/problems/daily-temperatures/">DailyTemperatures</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/DailyTemperatures.java">DailyTemperatures</a></td>
+    <td><strong>Monotic Decreasing Queue Approach--></strong><br>
+    Store first day temperature in stack<br>
+    Iterate temperatures - check if current day temp is warmer than prev day, <br>
+    if so pop current day temp from stack and diff btw them is result,<br>
+    and store current day temperature in stack.
+    update Stack on every iteration, that previous days are properly populated on corresponding index<br>
+	<strong>Note:</strong> Stack will always have decreasing order of temp
+    </td>
+  </tr>
  </table> 
 --------------------------------------------------------------------------------------------------------
