@@ -1,19 +1,5 @@
 package org.sk.stack;
 
-class Node {
-
-	int value;
-	Node next;
-	int min;
-
-	Node() {
-	}
-
-	Node(int value) {
-		this.value = value;
-	}
-}
-
 public class MinStackViaNode {
 
 	Node stack;
@@ -83,5 +69,19 @@ public class MinStackViaNode {
 		System.out.println(ms1.top());
 		System.out.println(ms1.getMin());
 		ms1.pop();
+	}
+
+	private class Node {
+
+		int value;
+		Node next;
+		int min;
+
+		Node() {
+		}
+
+		Node(int value) {
+			this.value = value;
+		}
 	}
 }
