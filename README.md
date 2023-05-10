@@ -169,3 +169,23 @@
   </tr>
  </table> 
 --------------------------------------------------------------------------------------------------------
+**Binary Search :**
+
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/binary-search/">Valid Parentheses</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/binarysearch/BinarySearch.java">BinarySearch</a></td>
+    <td>Search target in Sorted array is Binary Search, hence  <br> 
+    keep splitting/dividing the sorted array by mid value, <br>
+    if target is greater than nums[mid], then assign left to mid + 1<br>
+    else assign right to mid - 1<br>
+    Loop until left<=right <br></td>
+  </tr>
+ </table> 
