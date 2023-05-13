@@ -188,4 +188,40 @@
     else assign right to mid - 1<br>
     Loop until left<=right <br></td>
   </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/search-a-2d-matrix/">Search in 2D Matrix</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/binarysearch/TwoDBinarySearch.java">TwoDBinarySearch</a></td>
+    <td>Find the row where the target is, follow same approach used for Binary Search</td>
+  </tr>
+ </table> 
+ 
+--------------------------------------------------------------------------------------------------------
+**Sliding Window:**
+
+
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">Length of the longest substring</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/slidingwindow/LengthOfLongestSubstring.java">LengthOfLongestSubstring</a></td>
+    <td>1. Initiate HashSet or new int[128], store characters in corresponding ASCII - indexes<br> 
+    Once re-encountered the same character break the streak (right - left) and update MaxStreak<br>
+    Reset window start index by popping out characters (set ASCII index to zero) till the last re-encountered character<br> 
+    and return new window start index - by returning the last popped character index<br>
+    </td>
+  </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">Max Profit</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/slidingwindow/MaxProfit.java">MaxProfit</a></td>
+    <td>1. Start and Sell shares should be different days</br>
+   </td>
+  </tr>
  </table> 
