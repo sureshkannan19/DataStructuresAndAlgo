@@ -226,3 +226,36 @@
    </td>
   </tr>
  </table> 
+ 
+ --------------------------------------------------------------------------------------------------------
+**Linked List:**
+
+
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/reverse-linked-list/">Reverse LinkedList</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/ReverseLinkedList.java">ReverseLinkedList</a></td>
+    <td>Iterate until currentNode become empty<br> 
+    1. getAndStore next value in a variable(nextElement)<br> 
+    2. set current.next as previous<br>
+    3. set previous value as current<br> 
+    4. store current as = nextElement<br>
+    </td>
+  </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/merge-two-sorted-lists/">MergeTwoSortedLists</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/MergeTwoSortedLists.java">MergeTwoSortedLists</a></td>
+    <td>Iterate until both list becomes empty<br> 
+    1. find lowest value between both list and store in result<br> 
+    2. pop result = result.next on end of every iteration<br>
+    </td>
+  </tr>
+ </table> 
