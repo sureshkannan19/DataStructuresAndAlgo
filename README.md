@@ -259,4 +259,14 @@
     2. pop result = result.next on end of every iteration<br>
     </td>
   </tr>
+  <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">RemoveNthNodeAtEndOfList</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/RemoveNthNodeAtEndOfList.java">RemoveNthNodeAtEndOfList</a></td>
+    <td>To stop/find the nth position from the end of the list, we need two pointer approach<br> 
+    1. Initiate dummy node with head, and Move right pointer to n times, and delay left pointer(do not move left ptr)<br> 
+    2. Once right pointer shifted to n times, move both left and right pointer one by one<br>
+    3. at one stage right pointer will become null and left pointer will be at the n - 1th position from the end<br>
+    4. now set left.next as left.next.next</td>
+  </tr>
  </table> 
