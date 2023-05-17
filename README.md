@@ -195,6 +195,12 @@
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/binarysearch/TwoDBinarySearch.java">TwoDBinarySearch</a></td>
     <td>Find the row where the target is, follow same approach used for Binary Search</td>
   </tr>
+  <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Search in 2D Matrix</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/binarysearch/MinimumRotatedSortedArray.java">MinimumRotatedSortedArray</a></td>
+    <td>Find the minimum of the array, by Binary Search approach </td>
+  </tr>
  </table> 
  
 --------------------------------------------------------------------------------------------------------
