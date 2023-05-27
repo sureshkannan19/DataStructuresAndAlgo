@@ -232,6 +232,17 @@
     <td>1. Start and Sell shares should be different days</br>
    </td>
   </tr>
+   <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/longest-repeating-character-replacement/">Length of the longest substring</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/slidingwindow/LongestRepeatingCharacter.java">LongestRepeatingCharacter</a></td>
+    <td>Initiate array new int[26], maxCharCount, maxCount<br> 
+    Increment char count using ASCII index and update maxCharCount<br>
+    Decrement charCount-> when the window (right -left) - maxCharCount is > k(noOfCharacterReplacementAllowed) and<br>
+    increment left index<br>
+    and find max between window( right - left + 1) and update maxCount<br>
+    </td>
+  </tr>
  </table> 
  
  ---------------------------------------------------------------------------------------------------------
