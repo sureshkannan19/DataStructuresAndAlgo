@@ -158,7 +158,7 @@
 	<td>5</td>
     <td><a href="https://leetcode.com/problems/daily-temperatures/">DailyTemperatures</a></td>
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/stack/DailyTemperatures.java">DailyTemperatures</a></td>
-    <td><strong>Monotic Decreasing Queue Approach--></strong><br>
+    <td><strong>Monotic Decreasing Stack Approach--></strong><br>
     Store first day temperature in stack<br>
     Iterate temperatures - check if current day temp is warmer than prev day, <br>
     if so pop current day temp from stack and diff btw them is result,<br>
@@ -218,10 +218,11 @@
 	<td>1</td>
     <td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">Length of the longest substring</a></td>
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/slidingwindow/LengthOfLongestSubstring.java">LengthOfLongestSubstring</a></td>
-    <td>1. Initiate HashSet or new int[128], store characters in corresponding ASCII - indexes<br> 
-    Once re-encountered the same character break the streak (right - left) and update MaxStreak<br>
-    Reset window start index by popping out characters (set ASCII index to zero) till the last re-encountered character<br> 
-    and return new window start index - by returning the last popped character index<br>
+    <td>1. Initiate HashSet or new int[128] and fill arrays with -1<br> 
+    Once re-encountered the same character<br>
+    Reset window start index by adding +1 to last occurred index, and <br>
+    update last occurred character array index to current<br>
+    and find max between window( end - start + 1) and update MaxStreak<br>
     </td>
   </tr>
   <tr>

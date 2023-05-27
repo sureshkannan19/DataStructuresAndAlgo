@@ -17,7 +17,7 @@ public class RemoveNthNodeAtEndOfList {
 			left = left.next;
 		}
 		
-		// Step 3: Where left pointer is currently in, thats the node to be removed.
+		// Step 3: Where left pointer is currently in, thats the previous to the nth node to be removed.
 		left.next = left.next.next;
 		return dummy.next;
 	}

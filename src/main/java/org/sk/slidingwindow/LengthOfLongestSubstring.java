@@ -1,38 +1,32 @@
 package org.sk.slidingwindow;
 
+import java.util.Arrays;
+
 public class LengthOfLongestSubstring {
 
 	public int lengthOfLongestSubstring(String s) {
-		if (s.length() == 1 || s.length() == 0) {
-			return s.length();
+		int n = s.length();
+		if (n <= 1) {
+			return n;
 		}
-		int[] alphabets = new int[128];
-		int maxStreak = 0;
 
-		int left = 0;
-		int right = left + 1;
-		alphabets[s.charAt(left)]++;
-		while (left <= right && (left < s.length() && right < s.length())) {
-			if (alphabets[s.charAt(right)] != 0) {
-				left = resetWindowAndReturnNewWindowStartIndex(s, alphabets, right, left, s.charAt(right));
-			}
-			alphabets[s.charAt(right)]++;
-			right++;
-			maxStreak = Math.max(maxStreak, (right - left));
-		}
-		return maxStreak;
-	}
+		int[] lastOccurrence = new int[128];
+		Arrays.fill(lastOccurrence, -1);
 
-	private int resetWindowAndReturnNewWindowStartIndex(String s, int[] alphabets, int right, int left, char popTillChar) {
-		for (int i = left; i < right; i++) {
-			if (s.charAt(i) != popTillChar) {
-				alphabets[s.charAt(i)]--;
-				continue;
+		int maxLength = 0;
+		int start = 0;
+
+		for (int end = 0; end < n; end++) {
+			char c = s.charAt(end);
+			int lastIndex = lastOccurrence[c];
+			if (lastIndex >= start) {
+				start = lastIndex + 1;
 			}
-			alphabets[s.charAt(i)]--;
-			return i + 1;
+			lastOccurrence[c] = end;
+			maxLength = Math.max(maxLength, end - start + 1);
 		}
-		return 0;
+
+		return maxLength;
 	}
 
 	public static void main(String[] args) {
@@ -42,7 +36,7 @@ public class LengthOfLongestSubstring {
 		System.out.println(lols.lengthOfLongestSubstring("pwwkew")); // 3
 		System.out.println(lols.lengthOfLongestSubstring("aab")); // 2
 		System.out.println(lols.lengthOfLongestSubstring("dvdf"));// 3
-		System.out.println(lols.lengthOfLongestSubstring("tmmzuxt")); // 4
+		System.out.println(lols.lengthOfLongestSubstring("tmmzuxt")); // 5
 
 	}
 }

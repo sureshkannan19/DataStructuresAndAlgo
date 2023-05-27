@@ -14,20 +14,14 @@ public class DailyTemperatures {
 		for (int i = 1; i < temperatures.length; i++) {
 			if (stack.top().value < temperatures[i]) {
 				result[stack.top().index] = i - stack.pop().index;
-				updateStack(result, i, stack, temperatures[i]);
+				while (stack.top() != null && stack.top().value < temperatures[i]) {
+					result[stack.top().index] = i - stack.pop().index;
+				}
 			}
 			stack.push(temperatures[i], i);
 		}
 
 		return result;
-	}
-
-	private void updateStack(int[] result, int curInd, Stack stack, int curTemp) {
-		while (stack.top() != null && stack.top().value < curTemp) {
-			result[stack.top().index] = curInd - stack.pop().index;
-			updateStack(result, curInd, stack, curTemp);
-		}
-
 	}
 
 	private class Stack {
