@@ -21,18 +21,6 @@ public class FindDepthOfBinaryTreeViaIterativeDFS {
 		return depth;
 	}
 
-	class Pair {
-
-		int depth;
-		TreeNode root;
-
-		public Pair(int depth, TreeNode root) {
-			this.depth = depth;
-			this.root = root;
-		}
-
-	}
-	
 	public static void main(String[] args) {
 		FindDepthOfBinaryTreeViaIterativeDFS ibt = new FindDepthOfBinaryTreeViaIterativeDFS();
 		TreeNode root = new TreeNode(4);
