@@ -288,3 +288,54 @@
     4. now set left.next as left.next.next</td>
   </tr>
  </table> 
+ 
+ 
+ ---------------------------------------------------------------------------------------------------------
+ 
+**Tree:**
+
+
+<table style="width:100%">
+  <tr>
+	<td>Sl No</td>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+	<td>1</td>
+    <td><a href="https://leetcode.com/problems/invert-binary-tree/">Invert BinaryTree</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/InvertBinaryTree.java">InvertBinaryTree</a></td>
+    <td></td>
+  </tr>
+  <tr>
+	<td>2</td>
+    <td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">Maximum depth of BT</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/FindDepthofBinaryTreeViaRecursiveDFS.java">FindDepthofBinaryTreeViaRecursiveDFS</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/FindDepthOfBinaryTreeViaIterativeDFS.java">FindDepthOfBinaryTreeViaIterativeDFS</a></td>
+  </tr>
+  <tr>
+	<td>3</td>
+    <td><a href="https://leetcode.com/problems/diameter-of-binary-tree/">Diameter of BT</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/DiameterOfTheBinaryTree.java">DiameterOfTheBinaryTree</a></td>
+    <td></td>
+  </tr>
+  <tr>
+	<td>4</td>
+    <td><a href="https://leetcode.com/problems/balanced-binary-tree/">Balanced BT</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/IsBalancedBinaryTreeViaRecursiveDFS.java">IsBalancedBinaryTreeViaRecursiveDFS</a></td>
+    <td></td>
+  </tr>
+  <tr>
+	<td>5</td>
+    <td><a href="https://leetcode.com/problems/same-tree/">IsSameTree</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/IsSameTree.java">IsSameTree</a></td>
+    <td></td>
+  </tr>
+  <tr>
+	<td>6</td>
+    <td><a href="  https://leetcode.com/problems/subtree-of-another-tree/">IsSameSubTree</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/trees/IsSameSubTree.java">IsSameSubTree</a></td>
+    <td></td>
+  </tr>
+ </table> 
