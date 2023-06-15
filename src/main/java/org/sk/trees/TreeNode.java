@@ -6,19 +6,18 @@ public class TreeNode {
 	TreeNode left;
 	TreeNode right;
 
-	TreeNode() {
+	public TreeNode() {
 	}
 
-	TreeNode(int val) {
+	public TreeNode(int val) {
 		this.val = val;
 	}
 
-	TreeNode(int val, TreeNode left, TreeNode right) {
+	public TreeNode(int val, TreeNode left, TreeNode right) {
 		this.val = val;
 		this.left = left;
 		this.right = right;
 	}
-	
 
 	@Override
 	public String toString() {
@@ -27,8 +26,9 @@ public class TreeNode {
 
 	public static void print(TreeNode root) {
 		if (root != null) {
+			System.out.println("Current Root : " + root.val);
 			if (root.left != null && root.right != null) {
-				System.out.println("Current Root : " + root.val + "\t Left : " + root.left.val + "\t Right : " + root.right.val);
+				System.out.print("\t Left : " + root.left.val + "\t Right : " + root.right.val);
 			}
 			print(root.left);
 			print(root.right);

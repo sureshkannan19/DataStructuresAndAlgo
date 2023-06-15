@@ -287,6 +287,16 @@
     3. at one stage right pointer will become null and left pointer will be at the n - 1th position from the end<br>
     4. now set left.next as left.next.next</td>
   </tr>
+  <tr>
+	<td>4</td>
+    <td><a href="https://leetcode.com/problems/linked-list-cycle/">LinkedListCycle</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/LinkedListCycle.java">LinkedListCycle</a></td>
+    <td>Floyd's Algorithm - Slow and Fast Pointer<br> 
+    1. Initiate two pointers , where slow = head, fast = head.next<br> 
+    2. Iterate slow pointer one by one(slow.next) and fast pointer as fast.next.next<br>
+    3. at one stage both slow and fast pointer will meetup, then its a cycle<br>
+    4. if fast pointer becomes null then the given list is not a cycle.</td>
+  </tr>
  </table> 
  
  

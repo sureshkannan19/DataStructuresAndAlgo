@@ -11,10 +11,10 @@ public class MaxProfit {
 		for (int i = 1; i < prices.length; i++) {
 			if (prices[i] > minPrice) {
 				maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+			} else {
+				minPrice = Math.min(minPrice, prices[i]);
 			}
-			minPrice = Math.min(minPrice, prices[i]);
 		}
-
 		return maxProfit;
 	}
 
