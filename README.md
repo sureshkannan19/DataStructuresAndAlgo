@@ -297,6 +297,12 @@
     3. at one stage both slow and fast pointer will meetup, then its a cycle<br>
     4. if fast pointer becomes null then the given list is not a cycle.</td>
   </tr>
+  <tr>
+	<td>5</td>
+    <td><a href="https://leetcode.com/problems/lru-cache/">LRU Cache</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/LRUCache.java">LRUCache</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/LRUCacheViaLinkedHashMap.java">LRUCacheViaLinkedHashMap</a></td>
+  </tr>
  </table> 
  
  
