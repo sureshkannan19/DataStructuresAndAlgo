@@ -303,6 +303,12 @@
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/LRUCache.java">LRUCache</a></td>
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/LRUCacheViaLinkedHashMap.java">LRUCacheViaLinkedHashMap</a></td>
   </tr>
+   <tr>
+	<td>6</td>
+    <td><a href="https://leetcode.com/problems/minimum-window-substring/">LRU Cache</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/linkedlist/MinimumWindowSubstring.java">MinimumWindowSubstring</a></td>
+    <td></td>
+  </tr>
  </table> 
  
  
