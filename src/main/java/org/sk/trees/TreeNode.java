@@ -18,6 +18,31 @@ public class TreeNode {
 		this.left = left;
 		this.right = right;
 	}
+	
+	public TreeNode getLeft() {
+		return this.left;
+	}
+	
+	public TreeNode getRight() {
+		return this.right;
+	}
+
+	
+	public TreeNode addLeft(int val) {
+		this.left = new TreeNode(val);
+		return this.left;
+	}
+	
+	public TreeNode addRight(int val) {
+		this.right = new TreeNode(val);
+		return this.right;
+	}
+
+	public TreeNode addLeftAndRight(int left, int right) {
+		this.left = new TreeNode(left);
+		this.right = new TreeNode(right);
+		return this;
+	}
 
 	@Override
 	public String toString() {
