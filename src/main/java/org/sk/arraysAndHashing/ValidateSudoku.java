@@ -5,7 +5,7 @@ public class ValidateSudoku {
 	public boolean isValidSudoku(char[][] board) {
 		boolean[][] rows = new boolean[9][9];
 		boolean[][] cols = new boolean[9][9];
-		boolean[][] boxes = new boolean[9][9];
+		boolean[][] grids = new boolean[9][9];
 
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -21,13 +21,13 @@ public class ValidateSudoku {
 					// board[1][0]  board[1][1]  board[1][2]
 					// board[2][0]  board[2][1]  board[2][2]
 					
-					if (rows[i][num] || cols[j][num] || boxes[boxIndex][num]) {
+					if (rows[i][num] || cols[j][num] || grids[boxIndex][num]) {
 						return false;
 					}
 
 					rows[i][num] = true;
 					cols[j][num] = true;
-					boxes[boxIndex][num] = true;
+					grids[boxIndex][num] = true;
 				}
 			}
 		}
