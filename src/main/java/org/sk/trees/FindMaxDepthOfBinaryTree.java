@@ -2,7 +2,7 @@ package org.sk.trees;
 
 import java.util.LinkedList;
 
-public class FindDepthOfBinaryTree {
+public class FindMaxDepthOfBinaryTree {
 
 	public int maxDepthViaIteration(TreeNode root) {
 		int depth = 0;
@@ -41,7 +41,7 @@ public class FindDepthOfBinaryTree {
 	}
 
 	public static void main(String[] args) {
-		FindDepthOfBinaryTree ibt = new FindDepthOfBinaryTree();
+		FindMaxDepthOfBinaryTree ibt = new FindMaxDepthOfBinaryTree();
 		TreeNode root = new TreeNode(4);
 		root.left = new TreeNode(2, new TreeNode(1), new TreeNode(3));
 		root.right = new TreeNode(6, new TreeNode(5), new TreeNode(7));
