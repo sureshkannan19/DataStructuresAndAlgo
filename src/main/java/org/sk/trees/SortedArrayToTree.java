@@ -12,9 +12,11 @@ public class SortedArrayToTree {
 
 	private TreeNode helper(int left, int right, int nums[]) {
 		if (left > right) {
+//			System.out.println("Left: " + left + " Right: " + right + " Ignored");
 			return null;
 		}
 		int mid = (left + right) / 2;
+//		System.out.println("Left: " + left + " Right: " + right + " Mid: " + mid + " Value: " + nums[mid]);
 		TreeNode root = new TreeNode(nums[mid]);
 		root.left = helper(left, mid - 1, nums);
 		root.right = helper(mid + 1, right, nums);
@@ -23,8 +25,8 @@ public class SortedArrayToTree {
 
 	public static void main(String[] args) {
 		SortedArrayToTree sat = new SortedArrayToTree();
-		sat.sortedArrayToBST(new int[] { -10, -3, 0, 5, 9 });
-		sat.sortedArrayToBST(new int[] { 1, 3 });
+//		sat.sortedArrayToBST(new int[] { -10, -3, 0, 5, 9 });
+//		sat.sortedArrayToBST(new int[] { 1, 3 });
 		sat.sortedArrayToBST(new int[] { 0, 1, 2, 3, 4, 5 });
 	}
 }
