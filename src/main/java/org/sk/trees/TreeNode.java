@@ -53,7 +53,7 @@ public class TreeNode {
 		if (root != null) {
 			System.out.println("Current Root : " + root.val);
 			if (root.left != null && root.right != null) {
-				System.out.print("\t Left : " + root.left.val + "\t Right : " + root.right.val);
+				System.out.println("\t Left : " + root.left.val + "\t Right : " + root.right.val);
 			}
 			print(root.left);
 			print(root.right);
