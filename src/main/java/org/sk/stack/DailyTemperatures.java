@@ -24,46 +24,6 @@ public class DailyTemperatures {
 		return result;
 	}
 
-	private class Stack {
-
-		Node stack;
-		int size;
-
-		public void push(int val, int index) {
-			Node tmp = new Node(val, index);
-			if (size != 0) {
-				tmp.next = stack;
-				stack = tmp;
-			}
-			stack = tmp;
-			size++;
-		}
-
-		public Node pop() {
-			Node temp = stack;
-			stack = stack.next;
-			size--;
-			return temp;
-		}
-
-		public Node top() {
-			return stack;
-		}
-	}
-
-	private class Node {
-
-		int value;
-		Node next;
-		int index;
-
-		Node(int value, int index) {
-			this.value = value;
-			this.index = index;
-		}
-
-	}
-
 	public static void main(String[] args) {
 
 		DailyTemperatures tem = new DailyTemperatures();
