@@ -12,7 +12,7 @@ public class MaxProfit {
 			if (prices[i] > minPrice) {
 				maxProfit = Math.max(maxProfit, prices[i] - minPrice);
 			} else {
-				minPrice = Math.min(minPrice, prices[i]);
+				minPrice = prices[i];
 			}
 		}
 		return maxProfit;
