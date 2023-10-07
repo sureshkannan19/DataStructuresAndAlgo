@@ -13,11 +13,11 @@ public class IsAnagram {
 			ac[(int) t.charAt(i)]--;
 		}
 
-		for (int i = 0; i < t.length(); i++) {
-			if (ac[(int) t.charAt(i)] != 0) {
-				return false;
-			}
-		}
+        for (int j : ac) {
+            if (j != 0) {
+                return false;
+            }
+        }
 
 		return true;
 	}
