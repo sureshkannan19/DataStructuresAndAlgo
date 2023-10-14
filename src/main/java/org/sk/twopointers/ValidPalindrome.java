@@ -38,6 +38,43 @@ public class ValidPalindrome {
 		return true;
 	}
 
+	public boolean isPalindrome1(String s) {
+		int left = 0;
+		int right = s.length() - 1;
+
+		while (left < right) {
+			if (!isValid(s, left)) {
+				left++;
+				continue;
+			}
+			if (!isValid(s, right)) {
+				right--;
+				continue;
+			}
+			if (!isSame(s.charAt(left), s.charAt(right))) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;
+	}
+
+	private boolean isValid(String s, int index) {
+		return  (s.charAt(index) >= 48 && s.charAt(index) < 58)
+				|| (s.charAt(index) >= 65 && s.charAt(index) < 91)
+				|| (s.charAt(index) >= 97 && s.charAt(index) < 123);
+	}
+
+	private boolean isSame(int leftChar, int rightChar) {
+		if(leftChar != rightChar) {
+			if(leftChar >= 65 && leftChar <= 90 && leftChar + 32 == rightChar) {
+				return true;
+			} else return leftChar - 32 == rightChar;
+		}
+		return true;
+	}
+
 	public static void main(String[] args) {
 		ValidPalindrome vp = new ValidPalindrome();
 		System.out.println(vp.isPalindrome("A man, a plan, a canal: Panama"));
