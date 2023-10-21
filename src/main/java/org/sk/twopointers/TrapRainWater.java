@@ -4,7 +4,7 @@ public class TrapRainWater {
 
 	public int trap1(int[] height) {
 		int end = height.length - 2;
-		int min[] = new int[height.length], max[] = new int[height.length];
+		int[] min = new int[height.length], max = new int[height.length];
 
 		int maxLeft = 0, maxRight = 0;
 		for (int start = 1; start < height.length; start++, end--) {
@@ -15,7 +15,7 @@ public class TrapRainWater {
 		int trappedWater = 0;
 		for (int i = 0; i < height.length; i++) {
 			int temp = Math.min(min[i], max[i]) - height[i];
-			trappedWater += temp > 0 ? temp : 0;
+			trappedWater += Math.max(temp, 0);
 		}
 		return trappedWater;
 	}
@@ -28,12 +28,14 @@ public class TrapRainWater {
 		int maxLeft = height[0], maxRight = height[height.length - 1];
 		while (left <= right) {
 			if (maxLeft <= maxRight) {
-				trappedWater += Math.max(maxLeft - height[left], 0); // minLeft - height gives trapped water unit count
+				trappedWater += Math.max(maxLeft - height[left], 0); // height gives trapped water unit count
 				maxLeft = Math.max(height[left], maxLeft);
+				System.out.println("Left " + height[left] + " , trappedWater: "+ trappedWater);
 				left++;
 			} else {
 				trappedWater += Math.max(maxRight - height[right], 0);
 				maxRight = Math.max(height[right], maxRight);
+				System.out.println("Right " + height[right] + " , trappedWater: "+ trappedWater);
 				right--;
 			}
 		}
