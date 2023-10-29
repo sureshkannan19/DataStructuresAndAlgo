@@ -1,6 +1,6 @@
 <div>
 <style>
-	a {
+	a, td {
       text-decoration: none;
    }
 </style>
