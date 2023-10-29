@@ -5,6 +5,11 @@ import java.util.Arrays;
 public class LengthOfLongestSubstring {
 
 	public int lengthOfLongestSubstring(String s) {
+		// 1. initiate and populate lastOccurrence array with -1
+		// 2. store the occurrence index of each char in the lastOccurrence array
+		// 3. check if lastOccurrence array has >-1, which means repeated string occurred
+		// 4. shift the start position to lastOccurred Index + 1
+		// 5. end position is current index, difference between start and end is maxLength
 		int n = s.length();
 		if (n <= 1) {
 			return n;
