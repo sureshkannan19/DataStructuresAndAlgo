@@ -1,11 +1,3 @@
-<div>
-<style>
-	a, td {
-      text-decoration: none;
-   }
-</style>
-</div>
-
 # Data Structures and Algorithms in Java
 
 This repository contains a collection of Data Structures and Algorithms implemented in Java. It's a handy resource for anyone interested in problem-solving and algorithmic challenges. The solutions provided here cover a variety of topics, including arrays, hashing, two pointers, stacks, binary search, sliding windows, linked lists, and trees.
