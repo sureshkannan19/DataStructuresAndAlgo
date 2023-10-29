@@ -3,6 +3,10 @@ package org.sk.slidingwindow;
 public class LongestRepeatingCharacter {
 
 	public int characterReplacement(String s, int k) {
+		// 1. increment the count of char on each iteration,
+		// 2. initialize charCountMap, maxCharacterCount and maxCount
+		// 3. if the difference of maxCharacterCount and  (right- left + 1) is greater than the given threshold 'k'
+		// 4. then decrement the charCountMap and increment the left position for new window
 		int maxCount = 0;
 		int left = 0;
 		int right = 0;
