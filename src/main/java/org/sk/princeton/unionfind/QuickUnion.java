@@ -1,10 +1,10 @@
 package org.sk.princeton.unionfind;
 
-public class QuickFind {
+public class QuickUnion {
 
     private final int[] id;
 
-    public QuickFind(int length) {
+    public QuickUnion(int length) {
         this.id = new int[length];
         for (int i = 0; i < length; i++) {
             id[i] = i;
@@ -12,25 +12,30 @@ public class QuickFind {
     }
 
     public boolean isConnected(int p, int q) {
-        return id[p] == id[q];
+        return root(p) == root(q);
+    }
+
+    public int root(int i) {
+        while (id[i] != i) {
+            i = id[i];
+        }
+        return i;
     }
 
     public void union(int p, int q) {
         // 0 1 2 3 4 5
-        // Replace union nodes with same value
+        // Form tree structure, form branches based on root node -> Chase parent root node.
         // union(0,1) --> 1 1 2 3 4 5
-        // union(1,2) --> 2 2 2 3 4 5
-        int pid = id[p];
-        int qid = id[q];
-        for (int i = 0; i < id.length; i++) {
-            if (id[i] == pid) {
-                id[i] = qid;
-            }
-        }
+        // union(4,5) --> 1 1 2 3 5 5
+        // union(1,5) --> 1 5 2 3 5 5
+        // connected(0,5) --> Zeroth index has 1 , index 1 has 5 and index 5 has 5, hence it's connected.
+        int pid = root(p);
+        int qid = root(q);
+        id[pid] = qid;
     }
 
     public static void main(String[] args) {
-        QuickFind qf = new QuickFind(10);
+        QuickUnion qf = new QuickUnion(10);
         qf.union(1, 2);
         qf.union(3, 4);
         qf.union(5, 6);
