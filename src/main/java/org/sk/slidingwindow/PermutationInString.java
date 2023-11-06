@@ -3,7 +3,13 @@ package org.sk.slidingwindow;
 public class PermutationInString {
 
 	public boolean checkInclusion(String s1, String s2) {
-		int s1FreqArray[] = new int[26];
+		// 1. S1 string's permutation should present in S2 string
+		// 2. so one should be sorted/hashed and stored in array
+		// 3. while iterating S2 string, check for each char presence
+		// 4. increment the totalChars counter once encountered the same char in S2 and increment the right index on every iteration and once reached total length of S1 string,
+		// 	if -->  totalChars count is same as S1 string length ( in other words, window size) - it's Permutation
+		//  else --> reduce the totalChars by 1 and increment left index and keep iterating till the end of S2 string.
+		int[] s1FreqArray = new int[26];
 
 		int left = 0;
 		int right = left;

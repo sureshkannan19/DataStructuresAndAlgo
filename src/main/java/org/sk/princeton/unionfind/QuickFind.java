@@ -17,8 +17,6 @@ public class QuickFind {
 
     public void union(int p, int q) {
         // 0 1 2 3 4 5 6 7 8 9
-        // 4, 3 -->
-        // 3, 8 -->
         int pid = id[p];
         int qid = id[q];
         for (int i = 0; i < id.length; i++) {
