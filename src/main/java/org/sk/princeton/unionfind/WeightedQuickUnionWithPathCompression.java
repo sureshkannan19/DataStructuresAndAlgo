@@ -9,7 +9,7 @@ public class WeightedQuickUnionWithPathCompression {
         this.id = new int[length];
         this.sz = new int[length];
         for (int i = 0; i < length; i++) {
-            sz[i] = 1;
+            sz[i] = 1; // initialize size array with 1
             id[i] = i;
         }
     }
