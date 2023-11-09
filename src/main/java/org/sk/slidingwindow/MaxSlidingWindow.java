@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class MaxSlidingWIndow {
+public class MaxSlidingWindow {
 
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (k == 1) {
@@ -32,7 +32,7 @@ public class MaxSlidingWIndow {
     }
 
     public static void main(String[] args) {
-        MaxSlidingWIndow msw = new MaxSlidingWIndow();
+        MaxSlidingWindow msw = new MaxSlidingWindow();
         System.out.println(Arrays.toString(msw.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
         System.out.println(Arrays.toString(msw.maxSlidingWindow(new int[]{7, 2, 4}, 2)));
 
