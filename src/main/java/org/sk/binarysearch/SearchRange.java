@@ -49,9 +49,9 @@ public class SearchRange {
     public static void main(String[] args) {
         SearchRange sr = new SearchRange();
         System.out.println(Arrays.toString(sr.searchRange(new int[]{1, 2, 3, 3, 3, 3, 4, 5, 9}, 3)));
-//        System.out.println(Arrays.toString(sr.searchRange(new int[]{3, 3, 3}, 1)));
-//        System.out.println(Arrays.toString(sr.searchRange(new int[]{3, 3, 3}, 3)));
-//        System.out.println(Arrays.toString(sr.searchRange(new int[]{1}, 1)));
-//        System.out.println(Arrays.toString(sr.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8)));
+        System.out.println(Arrays.toString(sr.searchRange(new int[]{3, 3, 3}, 1)));
+        System.out.println(Arrays.toString(sr.searchRange(new int[]{3, 3, 3}, 3)));
+        System.out.println(Arrays.toString(sr.searchRange(new int[]{1}, 1)));
+        System.out.println(Arrays.toString(sr.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8)));
     }
 }
