@@ -17,24 +17,15 @@ public class SearchRange {
                 while (temp == target && --startInd >= 0) {
                     temp = nums[startInd];
                 }
-                if (!(startInd + 1 <= right && nums[startInd + 1] == target)) {
-                    startInd = mid;
-                } else {
-                    startInd++;
-                }
+                startInd++;
 
                 temp = target;
-
                 // Find End Index
                 int endInd = mid;
                 while (temp == target && ++endInd <= nums.length - 1) {
                     temp = nums[endInd];
                 }
-                if (!(endInd - 1 >= 0 && nums[endInd - 1] == target)) {
-                    endInd = mid;
-                } else {
-                    endInd--;
-                }
+                endInd--;
                 return new int[]{startInd, endInd};
             } else if (nums[mid] < target) {
                 left = mid + 1;
