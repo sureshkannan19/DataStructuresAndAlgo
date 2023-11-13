@@ -3,11 +3,6 @@ package org.sk.binarysearch;
 import java.util.*;
 
 public class TimeMap {
-
-    private String key;
-    private String value;
-    private int timestamp;
-
     private final Map<String, TreeMap<Integer, String>> keyValueStoreMap;
 
     public TimeMap() {
