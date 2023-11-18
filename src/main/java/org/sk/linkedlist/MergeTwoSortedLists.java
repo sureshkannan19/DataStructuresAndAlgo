@@ -3,25 +3,25 @@ package org.sk.linkedlist;
 public class MergeTwoSortedLists {
 
 	public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-		ListNode initiated = new ListNode();
-		ListNode mergedList = initiated;
+		ListNode result = new ListNode();
+		ListNode lastNode = result;
 
 		while (list1 != null && list2 != null) {
-			if (list1.val <= list2.val) {
-				mergedList.next = list1;
+			if (list1.val < list2.val) {
+				lastNode.next = list1;
 				list1 = list1.next;
 			} else {
-				mergedList.next = list2;
+				lastNode.next = list2;
 				list2 = list2.next;
 			}
-			mergedList = mergedList.next;
+			lastNode = lastNode.next;
 		}
-		if (list1 != null) {
-			mergedList.next = list1;
-		} else if (list2 != null) {
-			mergedList.next = list2;
+
+		ListNode l;
+		if ((l = list1) != null || (l = list2) != null) {
+			lastNode.next = l;
 		}
-		return initiated.next;
+		return result.next;
 	}
 
 	public static void main(String[] args) {
