@@ -3,9 +3,7 @@ package org.sk.linkedlist;
 public class PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         ListNode firstHalf = head;
-        ListNode secondHalf = new ListNode();
-        secondHalf.next = head.next;
-
+        ListNode secondHalf = head;
 
         ListNode previous = null;
         ListNode temp = null;
@@ -18,12 +16,12 @@ public class PalindromeLinkedList {
                 break;
             }
 
+            secondHalf = secondHalf.next.next;
+
             temp = firstHalf;
             firstHalf = firstHalf.next;
             temp.next = previous;
             previous = temp;
-
-            secondHalf = secondHalf.next.next;
         }
 
 
