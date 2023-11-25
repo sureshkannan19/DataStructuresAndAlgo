@@ -40,9 +40,12 @@ public class ReverseKGroup {
             this.reverse = previous;
         } else if (head != null) {
             // Linking previous reversed Kth group last node to reversed current K group's first Node
+            // 2 1 -- Previous reversed k-1 group --> 1 is stored in lastReversedNodeOfKGroup
+            // 4 3 -- current reversed k group --> linking 1 --> 4
             this.lastReversedNodeOfKGroup.next = previous;
         }
-        this.lastReversedNodeOfKGroup = head;
+        // 1 is stored in lastReversedNodeOfKGroup
+        // 3 is stored in lastReversedNodeOfKGroup
         return current;
     }
 
