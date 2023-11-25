@@ -7,7 +7,7 @@ public class ReverseKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         // take the length
         // find how many iterations required
-        // use reverse logic , reverse the kth group and link it to the previous reversed k-1 group
+        // using reverse logic
         ListNode temp = head;
         int length = 0;
         while (temp != null) {
@@ -46,12 +46,46 @@ public class ReverseKGroup {
         }
         // 1 is stored in lastReversedNodeOfKGroup
         // 3 is stored in lastReversedNodeOfKGroup
+        this.lastReversedNodeOfKGroup = head;
         return current;
     }
+
+
+    public ListNode reverseKGroupUsingRecursion(ListNode head, int k) {
+        if (head == null) {
+            return null;
+        }
+        ListNode tail = head;
+        for (int i = 0; i < k; ++i) {
+            if (tail == null) {// Less than k nodes, do nothing
+                return head;
+            }
+            tail = tail.next;
+        }
+        ListNode newHead = reverse(head, tail);
+        head.next = reverseKGroupUsingRecursion(tail, k);
+        return newHead;
+    }
+
+    private ListNode reverse(ListNode head, ListNode tail) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != tail) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+
 
     public static void main(String[] args) {
         ReverseKGroup r = new ReverseKGroup();
         ListNode.print(r.reverseKGroup(new ListNode(1).addAll(2, 3, 4, 5), 2));
         ListNode.print(r.reverseKGroup(new ListNode(1).addAll(2, 3, 4, 5), 3));
+
+        ListNode.print(r.reverseKGroupUsingRecursion(new ListNode(1).addAll(2, 3, 4, 5), 2));
+        ListNode.print(r.reverseKGroupUsingRecursion(new ListNode(1).addAll(2, 3, 4, 5), 3));
     }
 }
