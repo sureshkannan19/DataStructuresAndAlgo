@@ -7,7 +7,7 @@ public class ReverseKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         // take the length
         // find how many iterations required
-        // using reverse logic
+        // use reverse logic , reverse the kth group and link it to the previous reversed k-1 group
         ListNode temp = head;
         int length = 0;
         while (temp != null) {
