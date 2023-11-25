@@ -26,9 +26,9 @@ public class InvertBinaryTree {
 
 	public static void main(String[] args) {
 		InvertBinaryTree ibt = new InvertBinaryTree();
-		TreeNode root = new TreeNode(4);
-		root.left = new TreeNode(2, new TreeNode(1), new TreeNode(3));
-		root.right = new TreeNode(7, new TreeNode(6), new TreeNode(9));
-		TreeNode.print(ibt.invertTree(root));
+		TreeNode source = new TreeNode(4).leftAndRight(2, 7);
+		source.left.leftAndRight(1, 3);
+		source.right.leftAndRight(6, 9);
+		TreeNode.print(ibt.invertTree(source));
 	}
 }

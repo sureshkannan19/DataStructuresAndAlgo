@@ -1,63 +1,56 @@
 package org.sk.trees;
 
+import com.sun.source.tree.Tree;
+
 public class TreeNode {
 
-	int val;
-	TreeNode left;
-	TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-	public TreeNode() {
-	}
+    public TreeNode() {
+    }
 
-	public TreeNode(int val) {
-		this.val = val;
-	}
+    public TreeNode(int val) {
+        this.val = val;
+    }
 
-	public TreeNode(int val, TreeNode left, TreeNode right) {
-		this.val = val;
-		this.left = left;
-		this.right = right;
-	}
-	
-	public TreeNode getLeft() {
-		return this.left;
-	}
-	
-	public TreeNode getRight() {
-		return this.right;
-	}
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 
-	
-	public TreeNode addLeft(int val) {
-		this.left = new TreeNode(val);
-		return this.left;
-	}
-	
-	public TreeNode addRight(int val) {
-		this.right = new TreeNode(val);
-		return this.right;
-	}
+    public TreeNode left(int val) {
+        this.left = new TreeNode(val);
+        return this.left;
+    }
 
-	public TreeNode addLeftAndRight(int left, int right) {
-		this.left = new TreeNode(left);
-		this.right = new TreeNode(right);
-		return this;
-	}
+    public TreeNode right(int val) {
+        this.right = new TreeNode(val);
+        return this.right;
+    }
 
-	@Override
-	public String toString() {
-		return "TreeNode [val=" + val + "]";
-	}
+    public TreeNode leftAndRight(int left, int right) {
+        this.left = new TreeNode(left);
+        this.right = new TreeNode(right);
+        return this;
+    }
 
-	public static void print(TreeNode root) {
-		if (root != null) {
-			System.out.println("Current Root : " + root.val);
-			if (root.left != null && root.right != null) {
-				System.out.println("\t Left : " + root.left.val + "\t Right : " + root.right.val);
-			}
-			print(root.left);
-			print(root.right);
-		}
-	}
+    @Override
+    public String toString() {
+        return "TreeNode [val=" + val + "]";
+    }
+
+    public static void print(TreeNode root) {
+        if (root != null) {
+            System.out.print("Current Root : " + root.val);
+            System.out.print("\t Left : " + (root.left != null ? root.left.val : "NA"));
+            System.out.print("\t Right : " + (root.right != null ? root.right.val : "NA"));
+            System.out.println();
+            print(root.left);
+            print(root.right);
+        }
+    }
 
 }

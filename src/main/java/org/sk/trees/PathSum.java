@@ -30,8 +30,8 @@ public class PathSum {
 	public static void main(String[] args) {
 		PathSum ps = new PathSum();
 		TreeNode source = new TreeNode(5);
-		source.addLeft(4).addLeft(11).addLeftAndRight(7, 2);
-		source.addRight(8).addLeftAndRight(13, 4).getRight().addLeft(1);
+		source.left(4).left(11).leftAndRight(7, 2);
+		source.right(8).leftAndRight(13, 4).right.left(1);
 		System.out.print(ps.hasPathSum(source, 22));
 
 	}

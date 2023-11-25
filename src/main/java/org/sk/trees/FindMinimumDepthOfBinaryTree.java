@@ -48,16 +48,16 @@ public class FindMinimumDepthOfBinaryTree {
 	public static void main(String[] args) {
 		FindMinimumDepthOfBinaryTree ibt = new FindMinimumDepthOfBinaryTree();
 		TreeNode root = new TreeNode(3);
-		root.addLeftAndRight(9, 20).getRight().addLeftAndRight(15, 7);
+		root.leftAndRight(9, 20).right.leftAndRight(15, 7);
 		System.out.println(ibt.minDepth(root));
 		root = new TreeNode(3);
 		System.out.println(ibt.minDepth(root));
 		root = new TreeNode(15);
-		root.addLeftAndRight(9, 20).getLeft().addLeftAndRight(8, 10);
-		root.getRight().addLeftAndRight(19, 21);
+		root.leftAndRight(9, 20).left.leftAndRight(8, 10);
+		root.right.leftAndRight(19, 21);
 		System.out.println(ibt.minDepth(root));
 		root = new TreeNode(2);
-		root.addRight(3).addRight(4).addRight(5).addRight(6);
+		root.right(3).right(4).right(5).right(6);
 		System.out.println(ibt.minDepth(root));
 	}
 

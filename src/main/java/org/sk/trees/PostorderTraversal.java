@@ -53,8 +53,8 @@ public class PostorderTraversal {
 	public static void main(String[] args) {
 		PostorderTraversal post = new PostorderTraversal();
 		TreeNode source = new TreeNode(1);
-		source.addLeft(2).addLeftAndRight(3, 4).getRight().addRight(5);
-		source.addRight(2).addLeftAndRight(4, 3);
+		source.left(2).leftAndRight(3, 4).right.right(5);
+		source.right(2).leftAndRight(4, 3);
 		System.out.println(post.postorderTraversal(source)); // [3, 5, 4, 2, 4, 3, 2, 1]
 	}
 }

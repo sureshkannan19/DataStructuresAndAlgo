@@ -54,8 +54,8 @@ public class SymmetricTree {
 	public static void main(String[] args) {
 		SymmetricTree ps = new SymmetricTree();
 		TreeNode source = new TreeNode(1);
-		source.addLeft(2).addLeftAndRight(3, 4);
-		source.addRight(2).addLeftAndRight(4, 3);
+		source.left(2).leftAndRight(3, 4);
+		source.right(2).leftAndRight(4, 3);
 		System.out.println(ps.isSymmetric(source));
 
 		source = new TreeNode(1, new TreeNode(2), new TreeNode(3));
