@@ -15,7 +15,7 @@ public class InsertIntoBinaryTree {
         return root;
     }
 
-    public TreeNode insertIntoBSTViaIter(TreeNode root, int val) {
+    public TreeNode insertIntoBSTViaIteration(TreeNode root, int val) {
         if (root == null) {
             return new TreeNode(val);
         }
@@ -48,7 +48,7 @@ public class InsertIntoBinaryTree {
 
         source = new TreeNode(4).leftAndRight(2, 7);
         source.left.leftAndRight(1, 3);
-        res = ibt.insertIntoBSTViaIter(source, 5);
+        res = ibt.insertIntoBSTViaIteration(source, 5);
         TreeNode.print(res);
     }
 }
