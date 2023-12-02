@@ -21,19 +21,19 @@ public class TreeNode {
         this.right = right;
     }
 
-    public TreeNode left(int val) {
+    public TreeNode left(Integer val) {
         this.left = new TreeNode(val);
         return this.left;
     }
 
-    public TreeNode right(int val) {
+    public TreeNode right(Integer val) {
         this.right = new TreeNode(val);
         return this.right;
     }
 
-    public TreeNode leftAndRight(int left, int right) {
-        this.left = new TreeNode(left);
-        this.right = new TreeNode(right);
+    public TreeNode leftAndRight(Integer left, Integer right) {
+        if (left != null) this.left = new TreeNode(left);
+        if (right != null) this.right = new TreeNode(right);
         return this;
     }
 
