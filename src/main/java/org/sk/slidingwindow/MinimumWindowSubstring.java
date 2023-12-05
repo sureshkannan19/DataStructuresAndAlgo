@@ -52,7 +52,7 @@ public class MinimumWindowSubstring {
 				}
 				haveSubstrCountMap[s.charAt(left)]--;
 				count = needSubstrMap.get(s.charAt(left));
-				if (count != null && haveSubstrCountMap[s.charAt(left)] < count.intValue()) {
+				if (count != null && haveSubstrCountMap[s.charAt(left)] < count) {
 					haveCount--;
 				}
 				left++;
