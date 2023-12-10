@@ -20,6 +20,7 @@ public class Permutations {
                 temp.add(num);
             }
             result.add(temp);
+            System.out.println("Result added");
         } else {
             for (int cur = start; cur < nums.length; cur++) {
                 swap(cur, start, nums, "Before");
@@ -30,7 +31,7 @@ public class Permutations {
     }
 
     private void swap(int cur, int start, int[] nums, String state) {
-        if (cur == start) return;
+//        if (cur == start) return;
         int temp = nums[cur];
         nums[cur] = nums[start];
         nums[start] = temp;
