@@ -19,9 +19,11 @@ public class FormSubsets {
             return;
         }
         subset.add(nums[i]);
+        System.out.println("After adding :" + subset + " i+1 is: " + (i + 1));
         formSubset(nums, result, subset, i + 1);
 
         subset.pollLast();
+        System.out.println("After polling :" + subset + " i+1 is: " + (i + 1));
         formSubset(nums, result, subset, i + 1);
     }
 
