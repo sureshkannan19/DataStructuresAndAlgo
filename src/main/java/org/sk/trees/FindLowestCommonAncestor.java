@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class FindLowestCommonAncestor {
 
-    // leetcode solution need to check
+    // Leetcode top solution : traversed level by level
     public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
         int min = Math.min(p.val, q.val), max = Math.max(p.val, q.val);
         while (root != null) {
