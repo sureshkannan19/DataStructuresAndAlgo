@@ -14,6 +14,22 @@ public class JumpGame {
         return goal == 0;
     }
 
+    public boolean canJump1(int[] nums) {
+        int n = nums.length;
+        boolean[] canReach = new boolean[n];
+        canReach[0] = true;
+
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (canReach[j] && j + nums[j] >= i) {
+                    canReach[i] = true;
+                    break;
+                }
+            }
+        }
+        return canReach[n - 1];
+    }
+
     public static void main(String[] args) {
         JumpGame jg = new JumpGame();
         System.out.println(jg.canJump(new int[]{4, 2, 0, 0, 1, 1, 4, 4, 4, 0, 4, 0}));
