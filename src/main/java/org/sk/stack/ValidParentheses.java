@@ -6,30 +6,30 @@ import java.util.Map;
 
 public class ValidParentheses {
 
-	static Map<Character, Character> paranthesesMap = new HashMap<>(4, 1f);
+	static Map<Character, Character> parenthesesMap = new HashMap<>(4, 1f);
 	static {
-		paranthesesMap.put('}', '{');
-		paranthesesMap.put(')', '(');
-		paranthesesMap.put(']', '[');
+		parenthesesMap.put('}', '{');
+		parenthesesMap.put(')', '(');
+		parenthesesMap.put(']', '[');
 	}
 
 	public boolean isValid(String s) {
-		LinkedList<Character> parantheses = new LinkedList<>();
+		LinkedList<Character> parentheses = new LinkedList<>();
 		for (char c : s.toCharArray()) {
-			Character open = paranthesesMap.get(c);
+			Character open = parenthesesMap.get(c);
 			if (open != null) {
-				if (!parantheses.isEmpty() && parantheses.peek().equals(open)) {
-					parantheses.pop();
+				if (!parentheses.isEmpty() && parentheses.peek().equals(open)) {
+					parentheses.pop();
 				} else {
 					return false;
 				}
 			} else {
-				parantheses.push(c);
+				parentheses.push(c);
 			}
 		}
-		return parantheses.size() == 0;
+		return parentheses.size() == 0;
 	}
-	
+
 	public static void main(String[] args) {
 		ValidParentheses vp = new ValidParentheses();
 		System.out.println(vp.isValid("()"));
