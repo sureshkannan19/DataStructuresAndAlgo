@@ -27,7 +27,7 @@ public class ValidParentheses {
 				parentheses.push(c);
 			}
 		}
-		return parentheses.size() == 0;
+		return parentheses.isEmpty();
 	}
 
 	public static void main(String[] args) {
