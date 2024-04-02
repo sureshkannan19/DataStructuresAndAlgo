@@ -106,12 +106,12 @@ public class DesignLinkedList {
         }
 
         private void addAtIndex(int val, Node temp) {
-            Node tobeFutureNodePrev = temp.prev;
+            Node prevNode = temp.prev;
             Node current = new Node(val, temp);
-            current.prev = tobeFutureNodePrev;
+            current.prev = prevNode;
             temp.prev = current;
-            if (tobeFutureNodePrev != null) {
-                tobeFutureNodePrev.next = current;
+            if (prevNode != null) {
+                prevNode.next = current;
             }
         }
 
@@ -136,10 +136,10 @@ public class DesignLinkedList {
             Node temp = head;
             while (s < size) {
                 if (s == index) {
-                    Node tobeFutureNodePrev = temp.prev;
-                    tobeFutureNodePrev.next = temp.next;
+                    Node prevNode = temp.prev;
+                    prevNode.next = temp.next;
                     if(temp.next!=null) {
-                        temp.next.prev = tobeFutureNodePrev;
+                        temp.next.prev = prevNode;
                     }
                     size--;
                     return;
@@ -153,16 +153,16 @@ public class DesignLinkedList {
 
     public static void main(String[] args) {
         MyLinkedList dll = new MyLinkedList();
-//        dll.addAtHead(1);
-//        dll.addAtTail(3);
-//        dll.addAtIndex(1, 2);
-//        System.out.println(dll.get(1));
-//        dll.deleteAtIndex(1);
-//        System.out.println(dll.get(1));
+        dll.addAtHead(1);
+        dll.addAtTail(3);
+        dll.addAtIndex(1, 2);
+        System.out.println(dll.get(1));
+        dll.deleteAtIndex(1);
+        System.out.println(dll.get(1));
 
-//        dll = new MyLinkedList();
-//        dll.addAtHead(1);
-//        dll.deleteAtIndex(0);
+        dll = new MyLinkedList();
+        dll.addAtHead(1);
+        dll.deleteAtIndex(0);
 
         dll = new MyLinkedList();
         dll.addAtHead(7);
