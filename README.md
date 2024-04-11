@@ -3,7 +3,7 @@
 This repository contains a collection of Data Structures and Algorithms implemented in Java. It's a handy resource for anyone interested in problem-solving and algorithmic challenges. The solutions provided here cover a variety of topics, including arrays, hashing, two pointers, stacks, binary search, sliding windows, linked lists, and trees.
 
 ## Table of Contents
-
+- [Sorting](#sorting)
 - [Arrays & Hashing](#arrays--hashing)
 - [Two Pointers](#two-pointers)
 - [Stack](#stack)
@@ -12,6 +12,28 @@ This repository contains a collection of Data Structures and Algorithms implemen
 - [Linked List](#linked-list)
 - [Tree](#tree)
 
+## sorting
+<table style="width:100%">
+  <tr>
+    <td>Sl No</td>
+    <td>Question</td>
+    <td>Solution</td>
+    <td>Approach</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Selection Sort</td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/SelectionSort.java">SelectionSort</a></td>
+    <td>Select and swap -- Find Minimum in entire array and swap min value to first index 
+    and current first index value to position where min value found, continue this for index+1 position(next minimum value) till n-1 of the array from left to right</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Insertion Sort</td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/InsertionSort.java">SelectionSort</a></td>
+    <td>Find and swap -- Find Minimum between left and right, if found swap right to left</td>
+  </tr>
+</table>
 
 ## Arrays & Hashing
 
