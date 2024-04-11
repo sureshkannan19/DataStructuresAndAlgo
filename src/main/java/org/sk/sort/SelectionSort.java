@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
+    // Space Complexity - O(1)
+    // Time Complexity - Best case & Worst case - O(n^2)
     public int[] sort(int[] nums) {
         int i = 0;
         while (i < nums.length - 1) { // skipping last element sort

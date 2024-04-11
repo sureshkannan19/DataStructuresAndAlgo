@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class MergeSort {
 
+    // Space Complexity - O(n)
+    // Time Complexity - Best case & worst case: O(nlogn)
     public static void mergeSort(int[] a, int n) {
         if (n < 2) {
             return;
