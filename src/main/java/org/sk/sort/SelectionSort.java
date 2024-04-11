@@ -6,7 +6,7 @@ public class SelectionSort {
 
     public int[] sort(int[] nums) {
         int i = 0;
-        while (i < nums.length) {
+        while (i < nums.length - 1) { // skipping last element sort
             int min = nums[i];
             int swapInd = i;
             for (int j = i; j < nums.length; j++) {
