@@ -30,7 +30,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
   <tr>
     <td>2</td>
     <td>Insertion Sort</td>
-    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/InsertionSort.java">SelectionSort</a></td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/InsertionSort.java">InsertionSort</a></td>
     <td>Find and swap -- Find Minimum between left and right, if found swap right to left</td>
   </tr>
 </table>
