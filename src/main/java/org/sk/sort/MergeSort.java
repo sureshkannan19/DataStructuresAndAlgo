@@ -20,27 +20,27 @@ public class MergeSort {
         mergeSort(l, mid);
         mergeSort(r, n - mid);
 
-        merge(a, l, r, mid, n - mid);
+        merge(a, l, r);
     }
 
     private static void merge(
-            int[] a, int[] l, int[] r, int left, int right) {
-        System.out.println(Arrays.toString(a));
-        int i = 0, j = 0, k = 0;
-        while (i < left && j < right) {
-            if (l[i] <= r[j]) {
-                a[k++] = l[i++];
+            int[] actual, int[] l, int[] r) {
+        System.out.println(Arrays.toString(actual));
+        int leftInd = 0, rightInd = 0, actualInd = 0;
+        while (leftInd < l.length && rightInd < r.length) {
+            if (l[leftInd] <= r[rightInd]) {
+                actual[actualInd++] = l[leftInd++];
             } else {
-                a[k++] = r[j++];
+                actual[actualInd++] = r[rightInd++];
             }
         }
-        while (i < left) {
-            a[k++] = l[i++];
+        while (leftInd < l.length) {
+            actual[actualInd++] = l[leftInd++];
         }
-        while (j < right) {
-            a[k++] = r[j++];
+        while (rightInd < r.length) {
+            actual[actualInd++] = r[rightInd++];
         }
-        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(actual));
     }
 
     public static void main(String[] args) {
