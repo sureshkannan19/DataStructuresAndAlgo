@@ -1,6 +1,6 @@
 package org.sk.sort;
 
-public class FindKthLargest {
+public class FindKthLargestUsingQuickSort {
     public int findKthLargest(int[] nums, int k) {
         quickSort(nums, k, 0, nums.length - 1);
         return nums[k - 1];
@@ -19,7 +19,30 @@ public class FindKthLargest {
     }
 
     private int partition(int[] nums, int low, int high) {
-        int pivot = nums[low]; // 1st element is pivot
+        // last element is pivot
+//        int pivot = nums[high];
+//        int i = low;
+//        int j = high;
+//        // 6, 7, 8, 1
+//        while (i < j) {
+//            while (nums[i] > pivot && i < high) {
+//                i++;
+//            }
+//            while (nums[j] <= pivot && j > low) {
+//                j--;
+//            }
+//            if (i < j) {
+//                int temp = nums[j];
+//                nums[j] = nums[i];
+//                nums[i] = temp;
+//            }
+//        }
+//        nums[high] = nums[i];
+//        nums[i] = pivot;
+//        return i;
+
+        // 1st element is pivot
+        int pivot = nums[low];
         int i = low;
         int j = high;
         // 6, 7, 8, 1
@@ -42,7 +65,7 @@ public class FindKthLargest {
     }
 
     public static void main(String[] args) {
-        FindKthLargest f = new FindKthLargest();
+        FindKthLargestUsingQuickSort f = new FindKthLargestUsingQuickSort();
         System.out.println(f.findKthLargest(new int[]{3, 2, 1, 5, 6, 4}, 2));
         System.out.println(f.findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4));
     }
