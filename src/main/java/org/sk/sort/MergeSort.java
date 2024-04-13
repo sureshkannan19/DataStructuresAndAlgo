@@ -6,7 +6,8 @@ public class MergeSort {
 
     // Space Complexity - O(n)
     // Time Complexity - Best case & worst case: O(nlogn)
-    public static void mergeSort(int[] a, int n) {
+    public static void mergeSort(int[] a) {
+        int n = a.length;
         if (n < 2) {
             return;
         }
@@ -14,11 +15,11 @@ public class MergeSort {
         int[] l = new int[mid];
         int[] r = new int[n - mid];
 
-        System.arraycopy(a, 0, l, 0, mid);
-        System.arraycopy(a, mid, r, 0, n - mid);
+        System.arraycopy(a, 0, l, 0, l.length);
+        System.arraycopy(a, mid, r, 0, r.length);
 
-        mergeSort(l, mid);
-        mergeSort(r, n - mid);
+        mergeSort(l);
+        mergeSort(r);
 
         merge(a, l, r);
     }
@@ -34,6 +35,7 @@ public class MergeSort {
                 actual[actualInd++] = r[rightInd++];
             }
         }
+        // leftovers
         while (leftInd < l.length) {
             actual[actualInd++] = l[leftInd++];
         }
@@ -45,7 +47,7 @@ public class MergeSort {
 
     public static void main(String[] args) {
         int[] actual = {5, 1, 6, 2, 3, 4};
-        mergeSort(actual, actual.length);
+        mergeSort(actual);
         System.out.println(Arrays.toString(actual));
     }
 
