@@ -26,7 +26,7 @@ public class MergeSort {
 
     private static void merge(
             int[] actual, int[] l, int[] r) {
-        System.out.println(Arrays.toString(actual));
+        System.out.println("Before sorting : " +Arrays.toString(actual));
         int leftInd = 0, rightInd = 0, actualInd = 0;
         while (leftInd < l.length && rightInd < r.length) {
             if (l[leftInd] <= r[rightInd]) {
@@ -42,7 +42,7 @@ public class MergeSort {
         while (rightInd < r.length) {
             actual[actualInd++] = r[rightInd++];
         }
-        System.out.println(Arrays.toString(actual));
+        System.out.println("After sorting : " +Arrays.toString(actual));
     }
 
     public static void main(String[] args) {
