@@ -21,9 +21,29 @@ public class InsertionSort {
         return nums;
     }
 
+    public int[] recursiveSort(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            recursiveSort(nums, i);
+        }
+        return nums;
+    }
+
+
+    private void recursiveSort(int[] nums, int j) {
+        if (j > 0 && nums[j - 1] > nums[j]) { // swap immediately right to left if min element found
+            int left = nums[j - 1];
+            nums[j - 1] = nums[j];
+            nums[j] = left;
+            recursiveSort(nums, j - 1);
+        }
+    }
+
     public static void main(String[] args) {
         InsertionSort is = new InsertionSort();
         System.out.println(Arrays.toString(is.sort(new int[]{5, 4, 2, 3, 1})));
         System.out.println(Arrays.toString(is.sort(new int[]{50, 58, 1, 27, 123, 905, 12})));
+
+        System.out.println(Arrays.toString(is.recursiveSort(new int[]{5, 4, 2, 3, 1})));
+        System.out.println(Arrays.toString(is.recursiveSort(new int[]{50, 58, 1, 27, 123, 905, 12})));
     }
 }
