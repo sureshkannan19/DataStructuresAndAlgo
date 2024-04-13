@@ -1,8 +1,11 @@
 # Data Structures and Algorithms in Java
 
-This repository contains a collection of Data Structures and Algorithms implemented in Java. It's a handy resource for anyone interested in problem-solving and algorithmic challenges. The solutions provided here cover a variety of topics, including arrays, hashing, two pointers, stacks, binary search, sliding windows, linked lists, and trees.
+This repository contains a collection of Data Structures and Algorithms implemented in Java. It's a handy resource for
+anyone interested in problem-solving and algorithmic challenges. The solutions provided here cover a variety of topics,
+including arrays, hashing, two pointers, stacks, binary search, sliding windows, linked lists, and trees.
 
 ## Table of Contents
+
 - [Sorting](#sorting)
 - [Arrays & Hashing](#arrays--hashing)
 - [Two Pointers](#two-pointers)
@@ -13,6 +16,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
 - [Tree](#tree)
 
 ## sorting
+
 <table style="width:100%">
   <tr>
     <td>Sl No</td>
@@ -31,7 +35,24 @@ This repository contains a collection of Data Structures and Algorithms implemen
     <td>2</td>
     <td>Insertion Sort</td>
     <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/InsertionSort.java">InsertionSort</a></td>
-    <td>Find and swap -- Find Minimum between left and right, if found swap right to left</td>
+    <td>Find and swap immediately-- Find Minimum between left and right, if found swap immediately from right to left</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Merge Sort</td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/MergeSort.java">MergeSort</a></td>
+    <td>1. Bottom up approach<br>
+        2. Breakdown the array, into sub array until it cant be divided.<br>
+        3. Merge array</td>
+  </tr>
+<tr>
+    <td>4</td>
+    <td>Quick Sort</td>
+    <td><a href="https://github.com/sureshbabk19698/DataStructuresAndAlgo/blob/main/src/main/java/org/sk/sort/QuickSort.java">QuickSort</a></td>
+    <td>1. Top to bottom approach<br>
+        2. Assign pivot value, elements greater than pivot assign to right and the rest assign to left<br>
+        3. Move the pivot value to partition index(where elements on the left is lower than pivot and elements on the right is higher than pivot)<br>
+        4. Based on the partition index, repeat above steps.</td>
   </tr>
 </table>
 
@@ -150,6 +171,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
 </table>
 
 ## Stack
+
 <table style="width:100%">
   <tr>
     <td>Sl No</td>
@@ -185,6 +207,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
 </table>
 
 ## Binary Search
+
 <table style="width:100%">
   <tr>
     <td>Sl No</td>
@@ -214,6 +237,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
 </table>
 
 ## Sliding Window
+
 <table style="width:100%">
   <tr>
     <td>Sl No</td>
@@ -242,6 +266,7 @@ This repository contains a collection of Data Structures and Algorithms implemen
   </table>
 
 ## Linked List
+
 <table style="width:100%">
   <tr>
     <td>Sl No</td>
