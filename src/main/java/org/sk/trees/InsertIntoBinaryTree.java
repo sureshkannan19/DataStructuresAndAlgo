@@ -19,22 +19,20 @@ public class InsertIntoBinaryTree {
         if (root == null) {
             return new TreeNode(val);
         }
-
-        TreeNode current = root;
-        while (true) {
-            if (val > current.val) {
-                if (null == current.right) {
-                    current.right = new TreeNode(val);
-                    break;
-                }
-                current = current.right;
+        TreeNode temp = root;
+        TreeNode prev = root;
+        while (temp != null) {
+            prev = temp;
+            if (temp.val > val) {
+                temp = temp.left;
             } else {
-                if (null == current.left) {
-                    current.left = new TreeNode(val);
-                    break;
-                }
-                current = current.left;
+                temp = temp.right;
             }
+        }
+        if (prev.val > val) {
+            prev.left = new TreeNode(val);
+        } else {
+            prev.right = new TreeNode(val);
         }
         return root;
     }
