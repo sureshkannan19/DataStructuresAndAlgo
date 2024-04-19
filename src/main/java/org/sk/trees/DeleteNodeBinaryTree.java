@@ -29,24 +29,13 @@ public class DeleteNodeBinaryTree {
         if (tobeDeleted == null) {
             return root;
         }
-        if (left && tobeDeleted.right != null) {
-            prev.left = tobeDeleted.right;
-            moveNodeToLast(prev.left, tobeDeleted.left);
-        } else if (left && tobeDeleted.left != null) {
-            prev.left = tobeDeleted.left;
-        } else if (left) {
-            prev.left = null;
-        }
 
-        if (right && tobeDeleted.right != null) {
-            prev.right = tobeDeleted.right;
-            moveNodeToLast(prev.right, tobeDeleted.left);
-        } else if (right && tobeDeleted.left != null) {
-            prev.right = tobeDeleted.left;
-        } else if (right) {
-            prev.right = null;
-        }
+        linkChildNodesOfLeftParent(left, tobeDeleted, prev);
+        linkChildNodesOfRightParent(right, tobeDeleted, prev);
 
+        /**
+         * Root node delete
+         */
         if (!left && !right) {
             if (tobeDeleted.right != null) {
                 root = tobeDeleted.right;
@@ -58,6 +47,28 @@ public class DeleteNodeBinaryTree {
             }
         }
         return root;
+    }
+
+    private void linkChildNodesOfRightParent(boolean right, TreeNode tobeDeleted, TreeNode prev) {
+        if (right && tobeDeleted.right != null) {
+            prev.right = tobeDeleted.right;
+            moveNodeToLast(prev.right, tobeDeleted.left);
+        } else if (right && tobeDeleted.left != null) {
+            prev.right = tobeDeleted.left;
+        } else if (right) {
+            prev.right = null;
+        }
+    }
+
+    private void linkChildNodesOfLeftParent(boolean left, TreeNode tobeDeleted, TreeNode prev) {
+        if (left && tobeDeleted.right != null) {
+            prev.left = tobeDeleted.right;
+            moveNodeToLast(prev.left, tobeDeleted.left);
+        } else if (left && tobeDeleted.left != null) {
+            prev.left = tobeDeleted.left;
+        } else if (left) {
+            prev.left = null;
+        }
     }
 
     private void moveNodeToLast(TreeNode source, TreeNode target) {
