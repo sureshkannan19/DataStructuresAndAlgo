@@ -26,13 +26,13 @@ public class ConstructBTFromInorderAndPreorder {
     public TreeNode constructBT(int[] preorder, int preorderCurInd, int inorderStart, int inorderEnd) {
         TreeNode node = new TreeNode(preorder[preorderCurInd]);
         int inorderCurInd = inorderIndexMap.get(preorder[preorderCurInd]);
-        log.info("PreorderCurInd : {} , InorderCurInd : {} , InorderStart : {} , InorderEnd : {}, CurrentVal : {}", preorderCurInd, inorderCurInd, inorderStart, inorderEnd, node.val);
         if (inorderCurInd > inorderStart) {
             node.left = constructBT(preorder, preorderCurInd + 1, inorderStart, inorderCurInd - 1);
         }
         if (inorderCurInd < inorderEnd) {
-            node.right = constructBT(preorder, (preorderCurInd + inorderCurInd - inorderStart + 1), inorderCurInd + 1, inorderEnd);
+            node.right = constructBT(preorder, (preorderCurInd + 1) + inorderCurInd - inorderStart, inorderCurInd + 1, inorderEnd);
         }
+        log.info("PreorderCurInd : {} , InorderCurInd : {} , InorderStart : {} , InorderEnd : {}, CurrentVal : {}", preorderCurInd, inorderCurInd, inorderStart, inorderEnd, node.val);
         return node;
     }
 
