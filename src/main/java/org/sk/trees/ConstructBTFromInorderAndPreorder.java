@@ -21,18 +21,6 @@ public class ConstructBTFromInorderAndPreorder {
         return constructBT(preorder, 0, 0, preorder.length - 1);
     }
 
-
-//    private TreeNode constructBT(int[] preorder, int preLeft, int preRight, int inLeft) {
-//        if (preLeft > preRight) return null;
-////        log.info("PreLeft : {} , PreRight : {} , InLeft : {}", preLeft, preRight, inLeft);
-//        TreeNode root = new TreeNode(preorder[preLeft]); // 3
-//        int curInorderIndex = inorderIndexMap.get(root.val); // 1
-//        int balanceInorderElementsTobeProcessed = curInorderIndex - inLeft; // 1 - 0 = 1
-//        root.left = constructBT(preorder, preLeft + 1, preLeft + balanceInorderElementsTobeProcessed, inLeft);
-//        root.right = constructBT(preorder, preLeft + balanceInorderElementsTobeProcessed + 1, preRight, curInorderIndex + 1);
-//        return root;
-//    }
-
     // [10, 20, 40, 50, 30, 60] -- Preorder -- Root --> Left --> Right
     // [40, 20, 50, 10, 60, 30] -- Inorder -- Left --> Root --> Right
     public TreeNode constructBT(int[] preorder, int preorderCurInd, int inorderStart, int inorderEnd) {
