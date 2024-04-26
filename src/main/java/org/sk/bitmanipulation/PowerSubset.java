@@ -1,4 +1,4 @@
-package org.sk.backtracking;
+package org.sk.bitmanipulation;
 
 import java.util.ArrayList;
 import java.util.List;
