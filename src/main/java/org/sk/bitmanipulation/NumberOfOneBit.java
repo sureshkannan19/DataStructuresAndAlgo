@@ -17,5 +17,6 @@ public class NumberOfOneBit {
         NumberOfOneBit nob = new NumberOfOneBit();
         System.out.println(nob.hammingWeight(11));
         System.out.println(nob.hammingWeight(128));
+        System.out.println(nob.hammingWeight(2147483645));
     }
 }
