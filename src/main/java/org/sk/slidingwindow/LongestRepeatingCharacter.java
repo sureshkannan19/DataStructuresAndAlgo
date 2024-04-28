@@ -23,8 +23,8 @@ public class LongestRepeatingCharacter {
 				left++;
 			}
 
-			maxCount = Math.max(maxCount, right - left + 1);
 			right++;
+			maxCount = Math.max(maxCount, right - left);
 		}
 
 		return maxCount;
