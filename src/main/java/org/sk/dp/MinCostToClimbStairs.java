@@ -6,10 +6,6 @@ public class MinCostToClimbStairs {
         if (cost.length == 1) {
             return cost[0];
         }
-        if (cost.length == 2) {
-            return Math.min(cost[1], cost[0]);
-        }
-
         for (int i = cost.length - 1; i >= 0; i--) {
             cost[i] = min(cost, i);
         }
