@@ -46,6 +46,10 @@ public class PowerSubset {
         System.out.println(5 << 2);  // Left shift the 1 in binary form of 2, two place == 20
         System.out.println(5 << 3);  // Left shift the 1 in binary form of 2, three place == 40
 
+        System.out.println(10 ^ 2);
+        System.out.println(10 >> 2);
+        System.out.println(10 >> 3);
+
         int n = 7;
         String binaryString = Integer.toBinaryString(n);
         System.out.println(binaryString);
