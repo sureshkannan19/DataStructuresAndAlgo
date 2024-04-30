@@ -21,21 +21,22 @@ public class TrapRainWater {
 	}
 
 	public int trap2(int[] height) {
+		int maxLeft = 0;
+		int maxRight = 0;
+
 		int left = 0;
 		int right = height.length - 1;
-		int trappedWater = 0;
 
-		int maxLeft = height[0], maxRight = height[height.length - 1];
-		while (left <= right) {
-			if (maxLeft <= maxRight) {
-				trappedWater += Math.max(maxLeft - height[left], 0); // height gives trapped water unit count
-				maxLeft = Math.max(height[left], maxLeft);
-				System.out.println("Left " + height[left] + " , trappedWater: "+ trappedWater);
+		int trappedWater = 0;
+		while (left < right) {
+			maxLeft = Math.max(maxLeft, height[left]);
+			maxRight = Math.max(maxRight, height[right]);
+
+			if (height[left] < maxRight) {
+				trappedWater += Math.min(maxLeft, maxRight) - height[left];
 				left++;
 			} else {
-				trappedWater += Math.max(maxRight - height[right], 0);
-				maxRight = Math.max(height[right], maxRight);
-				System.out.println("Right " + height[right] + " , trappedWater: "+ trappedWater);
+				trappedWater += Math.min(maxLeft, maxRight) - height[right];
 				right--;
 			}
 		}
