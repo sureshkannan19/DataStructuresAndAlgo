@@ -10,14 +10,14 @@ public class SelectionSort {
         int i = 0;
         while (i < nums.length - 1) { // skipping last element sort
             int min = nums[i];
-            int swapInd = i;
+            int minValueIdx = i;
             for (int j = i; j < nums.length; j++) {
                 if (nums[j] < min) {
-                    swapInd = j;
+                    minValueIdx = j;
                     min = nums[j];
                 }
             }
-            nums[swapInd] = nums[i]; // whatever is in current index move to where the min element found and vice versa
+            nums[minValueIdx] = nums[i]; // whatever is in current index move to where the min element found and vice versa
             nums[i++] = min;
         }
         return nums;

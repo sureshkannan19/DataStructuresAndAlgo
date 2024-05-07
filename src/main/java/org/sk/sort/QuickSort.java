@@ -10,23 +10,23 @@ public class QuickSort {
         quickSort(nums, 0, nums.length - 1);
     }
 
-    private static void quickSort(int[] nums, int low, int high) {
-        if (low < high) {
-            int partitionInd = partition(nums, low, high);
-            quickSort(nums, low, partitionInd - 1);
-            quickSort(nums, partitionInd + 1, high);
+    private static void quickSort(int[] nums, int start, int end) {
+        if (start < end) {
+            int partitionInd = partition(nums, start, end);
+            quickSort(nums, start, partitionInd - 1);
+            quickSort(nums, partitionInd + 1, end);
         }
     }
 
-    private static int partition(int[] nums, int low, int high) {
-        int pivot = nums[low]; // taking first value as pivot
-        int i = low;
-        int j = high;
+    private static int partition(int[] nums, int start, int end) {
+        int pivot = nums[start]; // taking first value as pivot
+        int i = start;
+        int j = end;
         while (i < j) {
-            while (nums[i] <= pivot && i < high) { // breaking point when element present left side is greater than pivot
+            while (nums[i] <= pivot && i < end) { // breaking point when element present left side is greater than pivot
                 i++;
             }
-            while (nums[j] > pivot && j > low) { // breaking point when element present right side is less than pivot
+            while (nums[j] > pivot && j > start) { // breaking point when element present right side is less than pivot
                 j--;
             }
             System.out.print("Before sorting: " + Arrays.toString(nums) + " , Ith val: " + i + " , Jth val: " + j);
@@ -39,8 +39,8 @@ public class QuickSort {
             }
             System.out.println(" , After Sorting: " + Arrays.toString(nums));
         }
-        System.out.print("Before sorting: " + Arrays.toString(nums) + " , Ith val: " + i + " , Jth val: " + j);
-        nums[low] = nums[j];
+        System.out.print("Before sorting outside: " + Arrays.toString(nums) + " , Ith val: " + i + " , Jth val: " + j);
+        nums[start] = nums[j];
         nums[j] = pivot;
         System.out.println(" , After Sorting: " + Arrays.toString(nums));
         return j; // Partition index where values on the left side are smaller and values on the right side are greater, based on this array will be divided into sub array
