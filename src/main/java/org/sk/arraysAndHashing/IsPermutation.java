@@ -40,11 +40,7 @@ public class IsPermutation {
             mul1 *= array1[i];
             mul2 *= array2[i];
         }
-
-        if (sum1 != sum2 || mul1 != mul2) {
-            return false;
-        }
-        return true;
+        return sum1 == sum2 && mul1 == mul2;
     }
 
 
