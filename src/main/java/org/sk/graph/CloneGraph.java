@@ -38,7 +38,7 @@ public class CloneGraph {
                     oldNodeToNew.put(cur, newCur);
                 }
                 if (newCur.neighbors.isEmpty()) {
-                    System.out.println(" Vertice: " + cur.val);
+                    System.out.println(" Vertices: " + cur.val);
                     for (Node temp : cur.neighbors) {
                         System.out.print(" Neighbors: " + temp.val);
                         Node newTemp = oldNodeToNew.compute(temp, (k, v) -> v != null ? v : new Node(temp.val, new ArrayList<>(temp.neighbors.size())));
