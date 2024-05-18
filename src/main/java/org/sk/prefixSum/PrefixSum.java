@@ -1,4 +1,4 @@
-package org.sk.misc;
+package org.sk.prefixSum;
 
 public class PrefixSum {
 
