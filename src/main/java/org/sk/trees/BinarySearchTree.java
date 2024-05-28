@@ -1,14 +1,17 @@
 package org.sk.trees;
 
-import com.sun.source.tree.Tree;
-
 public class BinarySearchTree {
 
     public TreeNode searchBST(TreeNode root, int val) {
-        if (root != null) {
-            if (root.val == val) return root;
-            TreeNode result = searchBST(root.left, val);
-            return result == null ? searchBST(root.right, val) : result;
+        TreeNode temp = root;
+        while(temp!=null) {
+            if(temp.val == val) {
+                return temp;
+            } else if(temp.val < val) {
+                temp = temp.right;
+            }  else {
+                temp = temp.left;
+            }
         }
         return null;
     }
