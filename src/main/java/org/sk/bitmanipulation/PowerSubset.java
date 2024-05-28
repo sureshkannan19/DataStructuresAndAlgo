@@ -46,6 +46,9 @@ public class PowerSubset {
         System.out.println(5 << 2);  // Left shift the 1 in binary form of 2, two place == 20
         System.out.println(5 << 3);  // Left shift the 1 in binary form of 2, three place == 40
 
+        // 1010 == 10
+        // 0010 == 2
+        // 1000 == if bits are different then its one
         System.out.println(10 ^ 2);
         System.out.println(10 >> 2);
         System.out.println(10 >> 3);
