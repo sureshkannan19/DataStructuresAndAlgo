@@ -37,7 +37,7 @@ public class PowerSubset {
         //  0    0    0    0    0
         // number = 2
         // number of times left shift
-        System.out.println(2 << 1);  // Left shift the 1 in binary form of 2, one place == 4
+        System.out.println(2 << 1);  // Left shift the 1 in binary form of 2, two place == 4
         System.out.println(2 << 2);  // Left shift the 1 in binary form of 2, two place == 8
         System.out.println(2 << 3);  // Left shift the 1 in binary form of 2, three place == 16
 

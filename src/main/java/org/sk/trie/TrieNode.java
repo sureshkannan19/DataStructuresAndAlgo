@@ -1,11 +1,7 @@
 package org.sk.trie;
 
-import lombok.Getter;
 
-@Getter
 public class TrieNode {
-
-
     private final TrieNode[] childNode;
     private boolean endOfWord;
 
@@ -16,4 +12,10 @@ public class TrieNode {
         endOfWord = value;
     }
 
+    public TrieNode[] getChildNode() {
+        return childNode;
+    }
+    public boolean isEndOfWord() {
+        return endOfWord;
+    }
 }
