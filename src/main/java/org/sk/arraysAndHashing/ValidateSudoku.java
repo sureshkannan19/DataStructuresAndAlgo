@@ -3,9 +3,7 @@ package org.sk.arraysAndHashing;
 public class ValidateSudoku {
 
 	public boolean isValidSudoku(char[][] board) {
-		boolean[][] rows = new boolean[9][9];
-		boolean[][] cols = new boolean[9][9];
-		boolean[][] grids = new boolean[9][9];
+		Grid[][] grid = new Grid[9][9];
 
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -20,19 +18,29 @@ public class ValidateSudoku {
 					// board[0][0]  board[0][1]  board[0][2]
 					// board[1][0]  board[1][1]  board[1][2]
 					// board[2][0]  board[2][1]  board[2][2]
-					
-					if (rows[i][num] || cols[j][num] || grids[boxIndex][num]) {
+
+					grid[i][num] = grid[i][num] != null ? grid[i][num] : new Grid();
+					grid[j][num] = grid[j][num] != null ? grid[j][num] : new Grid();
+					grid[boxIndex][num] = grid[boxIndex][num] != null ? grid[boxIndex][num] : new Grid();
+
+					if (grid[i][num].row || grid[j][num].col || grid[boxIndex][num].grid) {
 						return false;
 					}
 
-					rows[i][num] = true;
-					cols[j][num] = true;
-					grids[boxIndex][num] = true;
+					grid[i][num].row  = true;
+					grid[j][num].col = true;
+					grid[boxIndex][num].grid = true;
 				}
 			}
 		}
 
 		return true;
+	}
+
+	static class Grid {
+		boolean row;
+		boolean col;
+		boolean grid;
 	}
 
 	public static void main(String[] args) {
