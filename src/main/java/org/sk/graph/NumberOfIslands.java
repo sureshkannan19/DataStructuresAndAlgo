@@ -5,6 +5,8 @@ public class NumberOfIslands {
     static int row;
     static int col;
 
+    static int[][] directions = new int[][]{{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+
     public static int numIslands(char[][] grid) {
         row = grid.length;
         col = grid[row - 1].length;
@@ -23,17 +25,12 @@ public class NumberOfIslands {
 
     private static void visitIsland(char[][] grid, int i, int j) {
         grid[i][j] = '*';
-        if (i - 1 >= 0 && grid[i - 1][j] == '1') {
-            visitIsland(grid, i - 1, j);
-        }
-        if (j - 1 >= 0 && grid[i][j - 1] == '1') {
-            visitIsland(grid, i, j - 1);
-        }
-        if (j + 1 < col && grid[i][j + 1] == '1') {
-            visitIsland(grid, i, j + 1);
-        }
-        if (i + 1 < row && grid[i + 1][j] == '1') {
-            visitIsland(grid, i + 1, j);
+        for (int[] dir : directions) {
+            int row = dir[0] + i;
+            int col = dir[1] + j;
+            if (row >= 0 && row < grid.length && col >= 0 && col < grid[row].length && grid[row][col] == '1') {
+                visitIsland(grid, row, col);
+            }
         }
     }
 
