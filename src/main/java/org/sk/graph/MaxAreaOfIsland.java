@@ -49,17 +49,6 @@ public class MaxAreaOfIsland {
             visitIsland(grid, i, j + 1);
         }
     }
-
-    class Pair {
-        int row;
-        int col;
-
-        Pair(int row, int col) {
-            this.row = row;
-            this.col = col;
-        }
-    }
-
     public int visitIslandViaBFS(int[][] grid) {
         row = grid.length;
         col = grid[row - 1].length;
@@ -76,18 +65,18 @@ public class MaxAreaOfIsland {
 
     private int visitIslandViaBFS(int[][] grid, int i, int j) {
         int sum = 1;
-        Queue<Pair> queue = new LinkedList<>();
-        queue.add(new Pair(i, j));
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{i, j});
         grid[i][j] = 2;
         while (!queue.isEmpty()) {
-            Pair island = queue.poll();
+            int[] island = queue.poll();
             for (int[] dir : directions) {
-                int row = dir[0] + island.row;
-                int col = dir[1] + island.col;
+                int row = dir[0] + island[0];
+                int col = dir[1] + island[1];
                 if (row >= 0 && row < grid.length && col >= 0 && col < grid[row].length && grid[row][col] == 1) {
                     grid[row][col] = 2;
                     sum++;
-                    queue.add(new Pair(row, col));
+                    queue.add(new int[]{row, col});
                 }
             }
         }
