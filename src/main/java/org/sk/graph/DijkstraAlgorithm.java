@@ -5,36 +5,38 @@ import java.util.*;
 public class DijkstraAlgorithm {
 
     public static int networkDelayTime(int[][] times, int n, int k) {
-
-        Map<Integer, List<int[]>> edgesMap = new HashMap<>();
+        Map<Integer, List<int[]>> graph = new HashMap<>();
         for (int[] edge : times) {
-            edgesMap.computeIfAbsent(edge[0], v -> new ArrayList<>()).add(new int[]{edge[1], edge[2]}); // Source (edge[0)) to dest (edge[1]) and its time taken(weight (edge[2]))
+            graph.computeIfAbsent(edge[0], v -> new ArrayList<>()).add(new int[]{edge[1], edge[2]}); // Source (edge[0)) to dest (edge[1]) and its time taken(weight (edge[2]))
         }
 
         PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparing(arr -> arr[0]));
         minHeap.add(new int[]{0, k}); // Weight(time-taken) at each Node starting from k node
 
-        int minPath = 0;
+        int maxTime = 0;
         Set<Integer> visitedNodes = new HashSet<>();
         while (!minHeap.isEmpty()) {
             int[] min = minHeap.poll();
-            int w1 = min[0];
-            int n1 = min[1];
-            if (!visitedNodes.contains(n1)) {
-                visitedNodes.add(n1);
-                minPath = Math.max(w1, minPath);
-                if (edgesMap.get(n1) != null) {
-                    for (int[] entry : edgesMap.get(n1)) {
-                        int n2 = entry[0];
-                        int w2 = entry[1];
-                        if (!visitedNodes.contains(n2)) {
-                            minHeap.add(new int[]{w1 + w2, n2});
+            int currentTime = min[0];
+            int currentNode = min[1];
+
+            if (!visitedNodes.contains(currentNode)) {
+                visitedNodes.add(currentNode);
+                maxTime = Math.max(currentTime, maxTime);
+
+                List<int[]> neighbors = graph.get(currentNode);
+                if (neighbors != null) {
+                    for (int[] neighbor : neighbors) {
+                        int nextNode = neighbor[0];
+                        int travelTime = neighbor[1];
+                        if (!visitedNodes.contains(nextNode)) {
+                            minHeap.add(new int[]{currentTime + travelTime, nextNode});
                         }
                     }
                 }
             }
         }
-        return visitedNodes.size() == n ? minPath : -1;
+        return visitedNodes.size() == n ? maxTime : -1;
     }
 
     public static void main(String[] args) {
