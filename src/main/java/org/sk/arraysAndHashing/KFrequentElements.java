@@ -12,15 +12,15 @@ public class KFrequentElements {
 			countMap.compute(num, (key, val) -> val != null ? val + 1 : 1);
 		}
 
-		PriorityQueue<Map.Entry<Integer, Integer>> sortByOccurence = new PriorityQueue<>(
+		PriorityQueue<Map.Entry<Integer, Integer>> sortByOccurrence = new PriorityQueue<>(
 				(a, b) -> b.getValue() - a.getValue());
 		for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
-			sortByOccurence.add(entry);
+			sortByOccurrence.add(entry);
 		}
 
 		int[] result = new int[k];
 		for (int i = 0; i < k; i++) {
-			result[i] = sortByOccurence.poll().getKey();
+			result[i] = sortByOccurrence.poll().getKey();
 		}
 		return result;
 	}
