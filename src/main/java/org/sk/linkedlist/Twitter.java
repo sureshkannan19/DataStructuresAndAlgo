@@ -21,8 +21,7 @@ public class Twitter {
     public List<Integer> getNewsFeed(int userId) {
         Set<Integer> followers = userFollowerMap.get(userId);
         List<Integer> newsFeed = new ArrayList<>();
-        if (Objects.nonNull(followers)) {
-            if (followers.isEmpty()) return newsFeed;
+        if (Objects.nonNull(followers) && !followers.isEmpty()) {
             for (int[] tweet : tweetsMap) {
                 if (newsFeed.size() < maxNewsFeed) {
                     if (followers.contains(tweet[1])) newsFeed.add(tweet[0]);
