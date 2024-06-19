@@ -6,7 +6,7 @@ public class Twitter {
 
     private final LinkedList<int[]> tweetsMap;
     private final HashMap<Integer, Set<Integer>> userFollowerMap;
-    private final int maxNewFeed = 10;
+    private final int maxNewsFeed = 10;
 
     public Twitter() {
         tweetsMap = new LinkedList<>();
@@ -24,7 +24,7 @@ public class Twitter {
         if (Objects.nonNull(followers)) {
             if (followers.isEmpty()) return newsFeed;
             for (int[] tweet : tweetsMap) {
-                if (newsFeed.size() < maxNewFeed) {
+                if (newsFeed.size() < maxNewsFeed) {
                     if (followers.contains(tweet[1])) newsFeed.add(tweet[0]);
                 } else {
                     break;
