@@ -30,8 +30,9 @@ public class LRUCache {
 
     public int get(int key) {
         Node node = cache.get(key);
-        // 3, 2, 1
-        // 2, 3, 1 
+        // key = 3
+        // 2, 3, 4
+        // 3, 2, 4
         if (Objects.nonNull(node)) {
 
             Node next = node.next;
