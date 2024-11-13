@@ -17,5 +17,6 @@ public class LCMAndGCD {
         int gcdValue = gcd(a, b);
         System.out.println("GCD = " + gcdValue);
         System.out.println("LCM = " + lcm(a, b, gcdValue));
+        System.out.println(30 % 20);
     }
 }
