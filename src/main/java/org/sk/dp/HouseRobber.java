@@ -2,12 +2,12 @@ package org.sk.dp;
 
 public class HouseRobber {
     public int rob(int[] nums) {
-        if (nums.length == 1) return nums[0];
-        nums[1] = Math.max(nums[0], nums[1]); // the maximum robber could steal, is stored at each index
-        for (int i = 2; i < nums.length; i++) {
-            nums[i] = Math.max(nums[i] + nums[i - 2], nums[i - 1]);
+        int n = nums.length;
+        if(nums.length > 1) nums[1] = Math.max(nums[0], nums[1]);
+        for(int i = 2; i < n; i++) {
+            nums[i] = Math.max(nums[i - 1], nums[i] + nums[i - 2]);
         }
-        return nums[nums.length - 1];
+        return nums[n - 1];
     }
 
     public static void main(String[] args) {
