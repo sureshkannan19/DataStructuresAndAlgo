@@ -4,6 +4,7 @@ public class MajorityElement {
 
     /**
      * Works only if the input has majority elements
+     * Moore's Voting algorithm
      * @param nums
      * @return
      */
