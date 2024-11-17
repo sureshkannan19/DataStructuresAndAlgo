@@ -3,10 +3,12 @@ package org.sk.linkedlist;
 public class FindDuplicateNumber {
 
     public int findDuplicate(int[] nums) {
+
+
+/*
         int slow = 0;
         int fast = 0;
 
-/*
         do {
             slow = nums[slow];
             fast = nums[nums[fast]];
@@ -28,7 +30,7 @@ public class FindDuplicateNumber {
             nums[curr - 1] = -1 * nums[curr - 1];
         }
 
-        return nums.length + 1;
+        return 0;
     }
 
     public static void main(String[] args) {
