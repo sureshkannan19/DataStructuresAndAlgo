@@ -1,5 +1,7 @@
 package org.sk.trees;
 
+import java.util.LinkedList;
+
 public class InvertBinaryTree {
 
 	public TreeNode invertTree(TreeNode root) {
@@ -21,6 +23,23 @@ public class InvertBinaryTree {
 			invertTree(root.left);
 			invertTree(root.right);
 		}
+		return root;
+	}
+
+	public TreeNode invertTreeViaBFS(TreeNode root) {
+		LinkedList<TreeNode> tree = new LinkedList<>();
+		tree.add(root);
+		while(!tree.isEmpty()) {
+			TreeNode tempRoot = tree.poll();
+			if(tempRoot !=null)  {
+				TreeNode temp = tempRoot.right;
+				tempRoot.right = tempRoot.left;
+				tempRoot.left = temp;
+				tree.add(tempRoot.right);
+				tree.add(tempRoot.left);
+			}
+		}
+
 		return root;
 	}
 
